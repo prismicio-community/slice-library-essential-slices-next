@@ -1,0 +1,26 @@
+{
+  "name": "slice-library-starter-next",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors gray,magenta",
+    "slicemachine": "start-slicemachine",
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint"
+  },
+  "dependencies": {
+    "@prismicio/react": "^2.0.0-beta.2",
+    "@prismicio/slice-canvas-renderer-react": "^0.0.1",
+    "next": "12.0.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "theme-ui": "^0.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.3",
+    "slice-machine-ui": "^0.1.1"
+  }
+}

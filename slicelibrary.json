@@ -1,0 +1,5 @@
+{
+  "name": "Essential Slices",
+  "sliceCanvasURL": "Add your Slice Canvas URL here",
+  "libraryPath": "@/src/slices"
+}
