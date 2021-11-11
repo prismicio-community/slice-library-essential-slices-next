@@ -7,7 +7,7 @@ A nicely made Slice Library for [Next.js][nextjs].
 
 ## Demo
 
-[![Try on Slice Showcase](https://angeloashmore-slicemachine-intro.cdn.prismic.io/angeloashmore-slicemachine-intro/49ca4bde-b36a-42f4-a072-60d2e5202f85_try-button.svg)](#)
+<a href="#"><img src="https://angeloashmore-slicemachine-intro.cdn.prismic.io/angeloashmore-slicemachine-intro/49ca4bde-b36a-42f4-a072-60d2e5202f85_try-button.svg" alt="Try on Slice Showcase" width="200" /></a>
 
 ## Quick Start
 
