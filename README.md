@@ -1,6 +1,6 @@
 # slice-library-essential-slices
 
-Nicely made Slice Library for Next.js.
+A nicely made Slice Library for [Next.js][nextjs].
 
 - ⬛ Built with [Theme UI][theme-ui]
 - ⚛️ Configurable with [`@prismicio/react`][prismic-react]
@@ -59,6 +59,7 @@ The same command can be used to add the Slice Library to an existing Slice Machi
    </PrismicProvider>;
    ```
 
+[nextjs]: https://nextjs.org/
 [theme-ui]: https://theme-ui.com/
 [prismic-react]: https://github.com/prismicio/prismic-react/tree/v2
 [slicemachine]: https://slicemachine.dev/
