@@ -5,6 +5,8 @@ A nicely made Slice Library for [Next.js][nextjs].
 - ⬛ Built with [Theme UI][theme-ui]
 - ⚛️ Configurable with [`@prismicio/react`][prismic-react]
 
+## Demo
+
 [![Try on Slice Showcase](https://angeloashmore-slicemachine-intro.cdn.prismic.io/angeloashmore-slicemachine-intro/49ca4bde-b36a-42f4-a072-60d2e5202f85_try-button.svg)](#)
 
 ## Quick Start
