@@ -30,13 +30,14 @@ The same command can be used to add the Slice Library to an existing Slice Machi
 
    import { ThemeProvider } from "theme-ui";
    import { PrismicProvider } from "@prismicio/react";
+   import { PrismicNextLink } from "@prismicio/next";
 
    import theme from "../slices/slice-library-essential-slices/theme";
 
    function App({ Component, pageProps }) {
      return (
        <ThemeProvider theme={theme}>
-         <PrismicProvider>
+         <PrismicProvider internalLinkComponent={PrismicNextLink}>
            <Component {...pageProps} />
          </PrismicProvider>
        </ThemeProvider>
@@ -46,15 +47,14 @@ The same command can be used to add the Slice Library to an existing Slice Machi
    export default App;
    ```
 
-3. If needed, configure `<PrismicProvider>` with your app's [Link Resolver][link-resolver] and custom Link component.
+3. If your app uses a [Link Resolver][link-resolver], add it to `<PrismicProvider>` in `_app.js`.
 
    ```jsx
    // _app.js
 
    import { linkResolver } from "../linkResolver";
-   import { Link } from "../components/Link";
 
-   <PrismicProvider linkResolver={linkResolver} internalLinkComponent={Link}>
+   <PrismicProvider linkResolver={linkResolver}>
      {/* ...children... */}
    </PrismicProvider>;
    ```
