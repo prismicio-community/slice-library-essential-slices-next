@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
 const Eyebrow = ({ children, ...props }) => {
   return (
@@ -8,20 +8,20 @@ const Eyebrow = ({ children, ...props }) => {
       __themeKey="container"
       variant="eyebrow"
       __css={{
-        fontSize: 'kicker',
-        lineHeight: 'button',
-        mb: '.65rem',
-        fontWeight: 'normal',
+        fontSize: "kicker",
+        lineHeight: "button",
+        mb: ".65rem",
+        fontWeight: "normal",
       }}
       {...props}
     >
       {children}
     </Box>
-  )
-}
+  );
+};
 
 Eyebrow.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Eyebrow
+export default Eyebrow;

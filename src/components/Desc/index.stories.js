@@ -1,15 +1,15 @@
-import React from 'react'
-import Desc from '.'
+import React from "react";
+import Desc from ".";
 
 export default {
-  title: 'Components/Desc',
+  title: "Components/Desc",
   component: Desc,
-}
+};
 
 export const Default = () => (
-  <Desc sx={{ backgroundColor: 'secondary', p: 'small' }}> Content</Desc>
-)
+  <Desc sx={{ backgroundColor: "secondary", p: "small" }}> Content</Desc>
+);
 
 Default.story = {
-  name: 'Default',
-}
+  name: "Default",
+};

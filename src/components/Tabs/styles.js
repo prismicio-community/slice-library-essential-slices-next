@@ -1,39 +1,41 @@
-export const baseTabsStyles = {}
+export const baseTabsStyles = {};
 
 // Tabs styles.
 export const getTabsHeaderStyles = (hideDivider) => {
   const dividerStyles = !hideDivider
-    ? { borderBottom: '1px solid', borderColor: 'border' }
-    : {}
+    ? { borderBottom: "1px solid", borderColor: "border" }
+    : {};
 
   return {
-    display: 'flex',
-    mb: 'small',
+    display: "flex",
+    mb: "small",
     ...dividerStyles,
-  }
-}
+  };
+};
 
 // Tabs Item styles.
 export const getBaseTabsItemStyles = (disabled) => {
-  const disabledStyles = disabled ? { opacity: 0.5, cursor: 'not-allowed' } : {}
+  const disabledStyles = disabled
+    ? { opacity: 0.5, cursor: "not-allowed" }
+    : {};
 
   return {
-    alignItems: 'center',
-    display: 'flex',
-    cursor: 'pointer',
-    fontSize: 'small',
-    mx: 'xsmall',
-    position: 'relative',
-    py: 'xsmall',
-    outline: 'none',
+    alignItems: "center",
+    display: "flex",
+    cursor: "pointer",
+    fontSize: "small",
+    mx: "xsmall",
+    position: "relative",
+    py: "xsmall",
+    outline: "none",
     ...disabledStyles,
-    '&:first-of-type': {
+    "&:first-of-type": {
       ml: 0,
     },
-    '&.active': {
-      fontWeight: 'bold',
-      outline: '3px solid currentColor',
-      outlineOffset: '5px',
+    "&.active": {
+      fontWeight: "bold",
+      outline: "3px solid currentColor",
+      outlineOffset: "5px",
     },
-  }
-}
+  };
+};

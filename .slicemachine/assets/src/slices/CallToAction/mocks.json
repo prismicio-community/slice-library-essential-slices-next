@@ -1,0 +1,38 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "call_to_action",
+    "items": [],
+    "primary": {
+      "iconImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+      },
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Iterate distributed e-business",
+          "spans": []
+        }
+      ],
+      "paragraph": [
+        {
+          "type": "paragraph",
+          "text": "Duis amet do magna quis magna cillum excepteur culpa ex laborum dolore eu excepteur ullamco. Excepteur reprehenderit minim tempor cupidatat officia sunt sunt proident sint laboris incididunt id deserunt veniam.",
+          "spans": []
+        }
+      ],
+      "buttonLink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "buttonLabel": "unleash real-time initiatives"
+    }
+  }
+]

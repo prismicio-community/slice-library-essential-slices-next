@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
 const Card = ({ children, ...props }) => {
   return (
@@ -8,20 +8,20 @@ const Card = ({ children, ...props }) => {
       variant="default"
       {...props}
       __css={{
-        borderRadius: 'card',
-        px: 'small',
-        py: 'medium',
-        textAlign: 'center',
+        borderRadius: "card",
+        px: "small",
+        py: "medium",
+        textAlign: "center",
       }}
       __themeKey="cards"
     >
       {children}
     </Box>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Card
+export default Card;

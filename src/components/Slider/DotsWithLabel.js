@@ -1,6 +1,6 @@
-import React from 'react'
-import { Box } from 'theme-ui'
-import { dotStyles, dotLabelStyles } from './styles'
+import React from "react";
+import { Box } from "theme-ui";
+import { dotStyles, dotLabelStyles } from "./styles";
 
 const DotsWithLabel = (index, dotsLabel) => {
   return (
@@ -12,7 +12,7 @@ const DotsWithLabel = (index, dotsLabel) => {
     >
       <Box as="span" __css={dotLabelStyles}>{`${dotsLabel} ${index + 1}`}</Box>
     </Box>
-  )
-}
+  );
+};
 
-export default DotsWithLabel
+export default DotsWithLabel;

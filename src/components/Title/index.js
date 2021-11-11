@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
 const Title = ({ children, ...props }) => {
   return (
@@ -8,18 +8,18 @@ const Title = ({ children, ...props }) => {
       __themeKey="container"
       variant="title"
       __css={{
-        mb: ['hPaddingHalf', null, 'hPadding'],
-        '& *': { mb: 0 },
+        mb: ["hPaddingHalf", null, "hPadding"],
+        "& *": { mb: 0 },
       }}
       {...props}
     >
       {children}
     </Box>
-  )
-}
+  );
+};
 
 Title.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Title
+export default Title;

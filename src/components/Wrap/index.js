@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
 const Wrap = ({ children, ...props }) => {
   return (
@@ -8,18 +8,18 @@ const Wrap = ({ children, ...props }) => {
       __themeKey="container"
       variant="wrapper"
       __css={{
-        mx: 'auto',
-        maxWidth: [null, null, '80%', '75%'],
+        mx: "auto",
+        maxWidth: [null, null, "80%", "75%"],
       }}
       {...props}
     >
       {children}
     </Box>
-  )
-}
+  );
+};
 
 Wrap.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Wrap
+export default Wrap;

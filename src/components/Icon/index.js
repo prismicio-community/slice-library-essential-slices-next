@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
 const Icons = {
   feature: `
@@ -124,7 +124,7 @@ const Icons = {
       </g>
     </svg>
   ),
-}
+};
 
 const Icon = React.forwardRef(({ name, variant, ...props }, ref) => {
   return (
@@ -135,18 +135,18 @@ const Icon = React.forwardRef(({ name, variant, ...props }, ref) => {
       variant={variant}
       __themeKey="icons"
     />
-  )
-})
+  );
+});
 
-Icon.encode = (name) => `data:image/svg+xml; utf8, ${Icons[name]}`
+Icon.encode = (name) => `data:image/svg+xml; utf8, ${Icons[name]}`;
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   variant: PropTypes.string,
-}
+};
 
 Icon.defaultProps = {
-  variant: 'default',
-}
+  variant: "default",
+};
 
-export default Icon
+export default Icon;

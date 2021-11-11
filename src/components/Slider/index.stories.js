@@ -1,45 +1,45 @@
-import React from 'react'
-import { Box } from 'theme-ui'
-import Slider from '.'
+import React from "react";
+import { Box } from "theme-ui";
+import Slider from ".";
 
 export default {
-  title: 'Components/Slider',
+  title: "Components/Slider",
   component: Slider,
-}
+};
 
 const CreateBoxes = (n) => {
-  const items = []
+  const items = [];
 
   for (let i = 0; i < n; i += 1) {
     items.push(
-      <Box sx={{ p: 'small' }}>
+      <Box sx={{ p: "small" }}>
         <Box
           sx={{
-            backgroundColor: 'secondary',
-            px: ['large', 'medium'],
-            py: 'large',
-            fontSize: 'large',
+            backgroundColor: "secondary",
+            px: ["large", "medium"],
+            py: "large",
+            fontSize: "large",
           }}
         >
           {`Content #${i + 1}`}
         </Box>
       </Box>
-    )
+    );
   }
 
-  return items
-}
+  return items;
+};
 
 export const Default = () => (
-  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto' }}>
+  <Box sx={{ width: "full", maxWidth: "50rem", mx: "auto" }}>
     <Slider infinite={false} speed={500} slidesToShow={1} slidesToScroll={1}>
       {CreateBoxes(5)}
     </Slider>
   </Box>
-)
+);
 
 export const WithDots = () => (
-  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
+  <Box sx={{ width: "full", maxWidth: "50rem", mx: "auto", mt: "medium" }}>
     <Slider
       dots
       dotsWithLabel
@@ -52,10 +52,10 @@ export const WithDots = () => (
       {CreateBoxes(5)}
     </Slider>
   </Box>
-)
+);
 
 export const Responsive = () => (
-  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
+  <Box sx={{ width: "full", maxWidth: "50rem", mx: "auto", mt: "medium" }}>
     <Slider
       infinite={false}
       speed={500}
@@ -99,4 +99,4 @@ export const Responsive = () => (
       {CreateBoxes(10)}
     </Slider>
   </Box>
-)
+);

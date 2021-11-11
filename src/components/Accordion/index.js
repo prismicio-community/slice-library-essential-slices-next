@@ -1,6 +1,6 @@
-import Accordion from './Accordion'
-import AccordionItem from './AccordionItem'
+import Accordion from "./Accordion";
+import AccordionItem from "./AccordionItem";
 
-Accordion.Item = AccordionItem
+Accordion.Item = AccordionItem;
 
-export default Accordion
+export default Accordion;

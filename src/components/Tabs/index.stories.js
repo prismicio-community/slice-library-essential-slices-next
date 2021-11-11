@@ -1,10 +1,10 @@
-import React from 'react'
-import Tabs from '.'
+import React from "react";
+import Tabs from ".";
 
 export default {
-  title: 'Components/Tabs',
+  title: "Components/Tabs",
   component: Tabs,
-}
+};
 
 export const Default = () => (
   <Tabs>
@@ -12,8 +12,8 @@ export const Default = () => (
     <Tabs.Item label="Label2">Content2</Tabs.Item>
     <Tabs.Item label="Label3">Content3</Tabs.Item>
   </Tabs>
-)
+);
 
 Default.story = {
-  name: 'Default',
-}
+  name: "Default",
+};

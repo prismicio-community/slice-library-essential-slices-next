@@ -1,10 +1,10 @@
-import Card from './Card'
-import CardContent from './CardContent'
-import CardFooter from './CardFooter'
-import CardImage from './CardImage'
+import Card from "./Card";
+import CardContent from "./CardContent";
+import CardFooter from "./CardFooter";
+import CardImage from "./CardImage";
 
-Card.Content = CardContent
-Card.Footer = CardFooter
-Card.Image = CardImage
+Card.Content = CardContent;
+Card.Footer = CardFooter;
+Card.Image = CardImage;
 
-export default Card
+export default Card;

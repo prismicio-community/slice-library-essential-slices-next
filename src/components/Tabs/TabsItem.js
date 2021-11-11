@@ -1,22 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'theme-ui'
+import React from "react";
+import PropTypes from "prop-types";
+import { Box } from "theme-ui";
 
-import { getBaseTabsItemStyles } from './styles'
+import { getBaseTabsItemStyles } from "./styles";
 
 const TabsItem = ({ active, disabled, label, variant, onActivate }) => {
-  const baseTabsItemStyles = getBaseTabsItemStyles(disabled)
+  const baseTabsItemStyles = getBaseTabsItemStyles(disabled);
 
   const tabsItemStyles = {
     ...baseTabsItemStyles,
-  }
+  };
 
   const onClickHandler = () => {
-    if (onActivate) onActivate()
-  }
+    if (onActivate) onActivate();
+  };
 
-  const defaultProps = !disabled ? { onClick: onClickHandler } : {}
-  const className = active ? 'active' : undefined
+  const defaultProps = !disabled ? { onClick: onClickHandler } : {};
+  const className = active ? "active" : undefined;
 
   return (
     <Box
@@ -28,15 +28,15 @@ const TabsItem = ({ active, disabled, label, variant, onActivate }) => {
     >
       {label}
     </Box>
-  )
-}
+  );
+};
 
 TabsItem.defaultProps = {
   active: false,
   disabled: false,
-  variant: 'default',
+  variant: "default",
   onActivate: undefined,
-}
+};
 
 TabsItem.propTypes = {
   active: PropTypes.bool,
@@ -44,6 +44,6 @@ TabsItem.propTypes = {
   variant: PropTypes.string,
   label: PropTypes.string.isRequired,
   onActivate: PropTypes.func,
-}
+};
 
-export default TabsItem
+export default TabsItem;

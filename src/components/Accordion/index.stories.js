@@ -1,11 +1,11 @@
-import React from 'react'
-import Accordion from '.'
-import mock from './mock.json'
+import React from "react";
+import Accordion from ".";
+import mock from "./mock.json";
 
 export default {
-  title: 'components/Accordion',
+  title: "components/Accordion",
   component: Accordion,
-}
+};
 
 export const Default = () => {
   return (
@@ -16,11 +16,11 @@ export const Default = () => {
             title={title}
             text={text}
             sx={{
-              mb: 'small',
+              mb: "small",
             }}
           />
-        )
+        );
       })}
     </Accordion>
-  )
-}
+  );
+};

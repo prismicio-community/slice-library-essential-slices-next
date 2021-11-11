@@ -1,0 +1,9 @@
+{
+  "src/slices": {
+    "CallToAction": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
+  }
+}
