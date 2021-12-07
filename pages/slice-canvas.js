@@ -5,12 +5,12 @@ import { components } from "../slices";
 import state from "../.slicemachine/slice-canvas-state.json";
 
 const SliceCanvas = () => (
-  <SliceCanvasRenderer
-    sliceZone={(slices) => (
-      <SliceZone slices={slices} components={components} />
-    )}
-    state={state}
-  />
+	<SliceCanvasRenderer
+		sliceZone={(slices) => (
+			<SliceZone slices={slices} components={components} />
+		)}
+		state={state}
+	/>
 );
 
 export default SliceCanvas;
