@@ -78,7 +78,6 @@ export default function VideoHighlights({
 								<button
 									className={cx(
 										"video-highlights__highlights__tab__button",
-
 										activeHighlightIndex === index &&
 											"video-highlights__highlights__tab__button--active",
 									)}
