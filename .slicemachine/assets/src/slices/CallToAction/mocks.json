@@ -3,8 +3,6 @@
     "variation": "default-slice",
     "name": "Default slice",
     "slice_type": "call_to_action",
-    "slice_label": null,
-    "version": "",
     "items": [],
     "primary": {
       "iconImage": {
@@ -14,27 +12,27 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
       },
       "title": [
         {
           "type": "heading1",
-          "text": "Iterate distributed e-business",
+          "text": "Facilitate seamless blockchains",
           "spans": []
         }
       ],
       "paragraph": [
         {
           "type": "paragraph",
-          "text": "Duis amet do magna quis magna cillum excepteur culpa ex laborum dolore eu excepteur ullamco. Excepteur reprehenderit minim tempor cupidatat officia sunt sunt proident sint laboris incididunt id deserunt veniam.",
+          "text": "Nostrud cupidatat minim fugiat elit culpa cillum aliqua Lorem deserunt voluptate incididunt adipisicing adipisicing. Mollit excepteur magna sunt. Culpa reprehenderit ex veniam amet eiusmod minim nisi nisi aliqua Lorem.",
           "spans": []
         }
       ],
       "buttonLink": {
         "link_type": "Web",
-        "url": "http://twitter.com"
+        "url": "https://prismic.io"
       },
-      "buttonLabel": "unleash real-time initiatives"
+      "buttonLabel": "revolutionize innovative schemas"
     }
   }
 ]

@@ -8,8 +8,6 @@ import * as prismicH from "@prismicio/helpers";
 
 import { ButtonLink } from "../../components/ButtonLink";
 
-import "./index.css";
-
 export type CallToActionSlice = prismicT.SharedSlice<
 	"call_to_action",
 	prismicT.SharedSliceVariation<
@@ -24,7 +22,7 @@ export type CallToActionSlice = prismicT.SharedSlice<
 	>
 >;
 
-export function CallToAction({
+export default function CallToAction({
 	slice,
 }: SliceComponentProps<CallToActionSlice>) {
 	return (

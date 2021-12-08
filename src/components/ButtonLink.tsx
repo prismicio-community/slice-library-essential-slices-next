@@ -2,8 +2,6 @@ import { PrismicLink, PrismicLinkProps } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 import clsx from "clsx";
 
-import "./ButtonLink.css";
-
 export type ButtonLinkProps<
 	LinkResolverFunction extends prismicH.LinkResolverFunction = prismicH.LinkResolverFunction,
 > = {

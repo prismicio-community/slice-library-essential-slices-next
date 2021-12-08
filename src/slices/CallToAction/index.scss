@@ -1,0 +1,56 @@
+@use "../../mixins" as *;
+
+.call-to-action {
+	background-color: #fff;
+	color: #333;
+	display: grid;
+	gap: 2rem;
+	padding: 8vw 2rem;
+
+	&__image {
+		max-width: 7.5rem;
+		justify-self: center;
+	}
+
+	&__content {
+		display: grid;
+		gap: 1rem;
+		justify-items: center;
+
+		&__heading {
+			font-size: 1.625rem;
+			font-weight: 700;
+			text-align: center;
+
+			@include md {
+				font-size: 2rem;
+			}
+
+			@include lg {
+				font-size: 2.5rem;
+			}
+
+			@include xl {
+				font-size: 2.75rem;
+			}
+		}
+
+		&__paragraph {
+			font-size: 1.15rem;
+			max-width: 38rem;
+			text-align: center;
+
+			@include xl {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 1rem;
+
+		@include md {
+			justify-self: center;
+		}
+	}
+}

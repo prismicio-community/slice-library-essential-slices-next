@@ -7,14 +7,14 @@
 	padding: 1rem 2.625rem;
 	text-align: center;
 	border-radius: 0.25rem;
-}
 
-.button--green {
-	background-color: #16745f;
-	color: #fff;
-	transition: background-color 100ms linear;
-}
+	&--green {
+		background-color: #16745f;
+		color: #fff;
+		transition: background-color 100ms linear;
 
-.button--green:hover {
-	background-color: #0d5e4c;
+		&:hover {
+			background-color: #0d5e4c;
+		}
+	}
 }

@@ -1,0 +1,22 @@
+// Breakpoint sizes
+$md: 640px;
+$lg: 896px;
+$xl: 1280px;
+
+@mixin md {
+	@media screen and (min-width: $md) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: $lg) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: $xl) {
+		@content;
+	}
+}

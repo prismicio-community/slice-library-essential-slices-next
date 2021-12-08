@@ -1,13 +1,6 @@
-import { ThemeProvider } from "theme-ui";
+import "../src/reset.css";
+import "../src/styles.css";
 
-import theme from "../src/theme";
-
-function App({ Component, pageProps }) {
-	return (
-		<ThemeProvider theme={theme}>
-			<Component {...pageProps} />
-		</ThemeProvider>
-	);
+export default function App({ Component, pageProps }) {
+	return <Component {...pageProps} />;
 }
-
-export default App;

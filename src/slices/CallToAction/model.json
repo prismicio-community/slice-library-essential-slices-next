@@ -1,54 +1,54 @@
 {
-	"id": "call_to_action",
-	"type": "SharedSlice",
-	"name": "CallToAction",
-	"description": "Call to action",
-	"variations": [
-		{
-			"id": "default-slice",
-			"name": "Default slice",
-			"docURL": "...",
-			"version": "58n92f2kvvefxk6",
-			"description": "Call to action",
-			"primary": {
-				"iconImage": {
-					"type": "Image",
-					"config": {
-						"label": "Icon Image",
-						"constraint": {},
-						"thumbnails": []
-					}
-				},
-				"title": {
-					"type": "StructuredText",
-					"config": {
-						"single": "heading1, heading2, heading3, heading4, heading5, heading6",
-						"label": "Title"
-					}
-				},
-				"paragraph": {
-					"type": "StructuredText",
-					"config": {
-						"multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-						"label": "Paragraph"
-					}
-				},
-				"buttonLink": {
-					"type": "Link",
-					"config": {
-						"label": "Button Link",
-						"placeholder": ""
-					}
-				},
-				"buttonLabel": {
-					"type": "Text",
-					"config": {
-						"label": "Button Label",
-						"placeholder": "Text for button"
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "call_to_action",
+  "type": "SharedSlice",
+  "name": "CallToAction",
+  "description": "Call to action",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "58n92f2kvvefxk6",
+      "description": "Call to action",
+      "primary": {
+        "iconImage": {
+          "type": "Image",
+          "config": {
+            "label": "Icon Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+            "label": "Title"
+          }
+        },
+        "paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+            "label": "Paragraph"
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": ""
+          }
+        },
+        "buttonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Text for button"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }
