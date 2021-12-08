@@ -6,6 +6,7 @@ import * as slices from "../src/slices";
 
 const components = {
 	call_to_action: slices.CallToAction,
+	customer_logos: slices.CustomerLogos,
 };
 
 const SliceCanvas = () => {

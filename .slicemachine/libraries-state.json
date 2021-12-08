@@ -104,6 +104,198 @@
           "extension": "tsx"
         },
         "screenshotPaths": {}
+      },
+      "customer_logos": {
+        "library": "src/slices",
+        "id": "customer_logos",
+        "name": "CustomerLogos",
+        "description": "CustomerLogos",
+        "model": {
+          "id": "customer_logos",
+          "type": "SharedSlice",
+          "name": "CustomerLogos",
+          "description": "CustomerLogos",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CustomerLogos",
+              "primary": {
+                "eyebrowHeadline": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Eyebrow Headline",
+                    "placeholder": "Trusted by",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "callToAction": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Call to Action",
+                    "placeholder": "View customer stories",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "callToActionLink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Call to Action Link",
+                    "placeholder": "Could be a signup link, or a link to customer stories",
+                    "allowTargetBlank": true
+                  }
+                }
+              },
+              "items": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {},
+                    "thumbnails": [],
+                    "label": "Logo"
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "Could be a link to use case, press article, signup...",
+                    "allowTargetBlank": true
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "customer_logos",
+            "items": [
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              },
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              },
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              },
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              },
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+                },
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "eyebrowHeadline": [
+                {
+                  "type": "heading2",
+                  "text": "Seize mission-critical experiences",
+                  "spans": []
+                }
+              ],
+              "callToAction": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolore id consectetur id dolore aute magna pariatur occaecat dolore consectetur incididunt in nostrud eiusmod. Reprehenderit irure eiusmod excepteur dolore consequat sit sit ex pariatur dolor magna nostrud dolore. Do eiusmod ad do et.",
+                  "spans": []
+                }
+              ],
+              "callToActionLink": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
       }
     }
   }

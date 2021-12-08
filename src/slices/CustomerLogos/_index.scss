@@ -1,0 +1,54 @@
+@use "../../mixins" as *;
+
+.customer-logos {
+	background-color: #f4f0ec;
+	color: #333;
+	display: grid;
+	gap: 2rem;
+	justify-items: center;
+	padding: 8vw 2rem;
+
+	&__heading {
+		color: #8592e0;
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	&__logos {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-left: -2rem;
+		margin-top: -2rem;
+		max-width: 64rem;
+
+		@include lg {
+			margin-left: -3rem;
+		}
+	}
+
+	&__logo {
+		padding-left: 2rem;
+		padding-top: 2rem;
+
+		@include lg {
+			margin-left: 3rem;
+		}
+
+		&__link {
+			&__image {
+				max-width: 10rem;
+			}
+		}
+	}
+
+	&__button {
+		justify-self: stretch;
+
+		@include md {
+			justify-self: center;
+		}
+	}
+}

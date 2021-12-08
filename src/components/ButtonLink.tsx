@@ -11,7 +11,7 @@ export type ButtonLinkProps<
 export function ButtonLink<
 	LinkResolverFunction extends prismicH.LinkResolverFunction = prismicH.LinkResolverFunction,
 >({
-	variant,
+	variant = "green",
 	children,
 	className,
 	...restProps

@@ -1,0 +1,61 @@
+{
+  "id": "customer_logos",
+  "type": "SharedSlice",
+  "name": "CustomerLogos",
+  "description": "CustomerLogos",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CustomerLogos",
+      "primary": {
+        "eyebrowHeadline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Eyebrow Headline",
+            "placeholder": "Trusted by",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "callToAction": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Call to Action",
+            "placeholder": "View customer stories",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "callToActionLink": {
+          "type": "Link",
+          "config": {
+            "label": "Call to Action Link",
+            "placeholder": "Could be a signup link, or a link to customer stories",
+            "allowTargetBlank": true
+          }
+        }
+      },
+      "items": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "thumbnails": [],
+            "label": "Logo"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "Could be a link to use case, press article, signup...",
+            "allowTargetBlank": true
+          }
+        }
+      }
+    }
+  ]
+}

@@ -4,6 +4,25 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "CustomerLogos": {
+      "default-slice": {
+        "primary": {
+          "eyebrowHeadline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "callToAction": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
     }
   }
 }

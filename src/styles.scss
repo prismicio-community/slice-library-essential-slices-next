@@ -2,7 +2,8 @@
 @use "./components/ButtonLink";
 
 // Slices
-@use "./slices/CallToAction/index";
+@use "./slices/CallToAction";
+@use "./slices/CustomerLogos";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
