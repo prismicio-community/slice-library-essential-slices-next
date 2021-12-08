@@ -1,0 +1,5 @@
+# treat these files as binaries to prevent merge headache
+package-lock.json -diff
+yarn.lock -diff
+src/styles.css -diff
+src/styles.css.map -diff
