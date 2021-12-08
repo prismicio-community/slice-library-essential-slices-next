@@ -5,13 +5,13 @@ import clsx from "clsx";
 export type ButtonLinkProps<
 	LinkResolverFunction extends prismicH.LinkResolverFunction = prismicH.LinkResolverFunction,
 > = {
-	variant?: "green";
+	variant?: "green" | "black";
 } & PrismicLinkProps<"a", "a", LinkResolverFunction>;
 
 export function ButtonLink<
 	LinkResolverFunction extends prismicH.LinkResolverFunction = prismicH.LinkResolverFunction,
 >({
-	variant = "green",
+	variant = "black",
 	children,
 	className,
 	...restProps

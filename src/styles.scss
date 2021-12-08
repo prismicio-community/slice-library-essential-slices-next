@@ -1,12 +1,14 @@
 // Components
 @use "./components/ButtonLink";
+@use "./components/BoundedSection";
 
 // Slices
 @use "./slices/CallToAction";
 @use "./slices/CustomerLogos";
+@use "./slices/PricingTable";
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
-.slice {
+.essential-slice {
 	font-family: "Inter", system-ui, sans-serif;
 }

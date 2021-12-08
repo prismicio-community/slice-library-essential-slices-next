@@ -1,0 +1,106 @@
+@use "../../mixins" as *;
+
+.pricing-table {
+	background-color: #fff;
+	color: #333;
+
+	&__content {
+		display: grid;
+		gap: 2rem;
+
+		@include md {
+			gap: 3rem;
+		}
+
+		@include xl {
+			gap: 5rem;
+		}
+	}
+
+	&__intro {
+		display: grid;
+		gap: 1rem;
+
+		&__eyebrow {
+			color: #8592e0;
+			font-size: 1.5rem;
+			font-weight: 500;
+
+			@include xl {
+				text-align: center;
+			}
+		}
+
+		&__headline {
+			font-size: 1.5rem;
+			font-weight: 700;
+
+			@include xl {
+				text-align: center;
+			}
+		}
+
+		&__description {
+			font-size: 1.15rem;
+
+			@include xl {
+				text-align: center;
+			}
+		}
+	}
+
+	&__plans {
+		display: grid;
+		gap: 2.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		justify-self: center;
+	}
+
+	&__plan {
+		&__card {
+			height: 100%;
+		}
+	}
+}
+
+.plan-card {
+	align-content: flex-start;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+
+	&--beige {
+		background-color: #f4f0ec;
+		border: 1px solid #f4f0ec;
+		color: #333;
+	}
+
+	&--white {
+		background-color: #fff;
+		border: 1px solid #333;
+		color: #333;
+	}
+
+	&__content {
+		align-content: flex-start;
+		display: grid;
+		flex-grow: 1;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+
+		&__title {
+			font-size: 1.17rem;
+			font-weight: 700;
+		}
+
+		&__price {
+			color: #878787;
+			font-size: 0.9rem;
+		}
+
+		&__features {
+			font-size: 0.9rem;
+		}
+	}
+}

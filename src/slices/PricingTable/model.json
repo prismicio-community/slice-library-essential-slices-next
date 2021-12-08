@@ -1,0 +1,85 @@
+{
+  "id": "pricing_table",
+  "type": "SharedSlice",
+  "name": "PricingTable",
+  "description": "PricingTable",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PricingTable",
+      "primary": {
+        "eyebrowHeadline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Eyebrow Headline",
+            "placeholder": "Pricing plans",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title",
+            "placeholder": "Choose the plan"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, strong, em, hyperlink",
+            "allowTargetBlank": true,
+            "label": "Description",
+            "placeholder": "Choose the version that works for you ..."
+          }
+        }
+      },
+      "items": {
+        "planTitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Plan title",
+            "placeholder": "Simple, Gold, Premium..."
+          }
+        },
+        "priceOption": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "heading4",
+            "label": "Price Option",
+            "placeholder": "Free, $19, Contact us..."
+          }
+        },
+        "features": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "list-item",
+            "label": "Features",
+            "placeholder": "A list of features using bullet list"
+          }
+        },
+        "callToAction": {
+          "type": "Link",
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Call To Action",
+            "placeholder": "Link to Signup / More info..."
+          }
+        },
+        "callToActionText": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph",
+            "label": "Call To Action Text",
+            "placeholder": "Start your free trial"
+          }
+        }
+      }
+    }
+  ]
+}

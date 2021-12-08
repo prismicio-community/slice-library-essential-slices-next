@@ -23,6 +23,18 @@
         },
         "items": {}
       }
+    },
+    "PricingTable": {
+      "default-slice": {
+        "primary": {
+          "eyebrowHeadline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -3,9 +3,12 @@
 .call-to-action {
 	background-color: #fff;
 	color: #333;
-	display: grid;
-	gap: 2rem;
 	padding: 8vw 2rem;
+
+	&__content {
+		display: grid;
+		gap: 2rem;
+	}
 
 	&__image {
 		max-width: 7.5rem;
