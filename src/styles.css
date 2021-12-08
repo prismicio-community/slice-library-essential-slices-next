@@ -23,29 +23,6 @@
   background-color: #0d5e4c;
 }
 
-.bounded-box {
-  padding: 8vw 2rem;
-}
-.bounded-box__content {
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 640px) {
-  .bounded-box__content {
-    max-width: 90%;
-  }
-}
-@media screen and (min-width: 896px) {
-  .bounded-box__content {
-    max-width: 80%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bounded-box__content {
-    max-width: 75%;
-  }
-}
-
 .call-to-action {
   background-color: #fff;
   color: #333;
@@ -362,6 +339,29 @@
 
 .essential-slice {
   font-family: "Inter", system-ui, sans-serif;
+}
+
+.bounded {
+  padding: 8vw 2rem;
+}
+.bounded__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 640px) {
+  .bounded__content {
+    max-width: 90%;
+  }
+}
+@media screen and (min-width: 896px) {
+  .bounded__content {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bounded__content {
+    max-width: 75%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

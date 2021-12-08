@@ -78,7 +78,7 @@
 				display: block;
 				content: "";
 				width: 100%;
-				padding-top: (9 / 16) * 100%;
+				padding-top: calc(100% * 9 / 16);
 			}
 
 			&__embed {

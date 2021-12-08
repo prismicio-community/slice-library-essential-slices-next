@@ -7,7 +7,6 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { ButtonLink } from "../../components/ButtonLink";
-import { BoundedSection } from "../../components/BoundedSection";
 
 export type CustomerLogosSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -29,12 +28,12 @@ export default function CustomerLogos({
 	slice,
 }: SliceComponentProps<CustomerLogosSlice>) {
 	return (
-		<BoundedSection
+		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice customer-logos"
+			className="essential-slice bounded customer-logos"
 		>
-			<div className="customer-logos__content">
+			<div className="bounded__content customer-logos__content">
 				{prismicH.asText(slice.primary.eyebrowHeadline) && (
 					<h2 className="customer-logos__heading">
 						<PrismicText field={slice.primary.eyebrowHeadline} />
@@ -68,6 +67,6 @@ export default function CustomerLogos({
 					{prismicH.asText(slice.primary.callToAction) || "Learn more"}
 				</ButtonLink>
 			</div>
-		</BoundedSection>
+		</section>
 	);
 }

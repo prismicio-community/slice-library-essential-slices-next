@@ -7,7 +7,6 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { ButtonLink } from "../../components/ButtonLink";
-import { BoundedSection } from "../../components/BoundedSection";
 
 export type CallToActionSlice = prismicT.SharedSlice<
 	"call_to_action",
@@ -27,12 +26,12 @@ export default function CallToAction({
 	slice,
 }: SliceComponentProps<CallToActionSlice>) {
 	return (
-		<BoundedSection
+		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="slice call-to-action"
+			className="essential-slice bounded call-to-action"
 		>
-			<div className="call-to-action__content">
+			<div className="bounded__content call-to-action__content">
 				{slice.primary.iconImage.url && (
 					<img
 						src={slice.primary.iconImage.url}
@@ -60,6 +59,6 @@ export default function CallToAction({
 					{slice.primary.buttonLabel || "Learn more…"}
 				</ButtonLink>
 			</div>
-		</BoundedSection>
+		</section>
 	);
 }

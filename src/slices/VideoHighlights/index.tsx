@@ -8,7 +8,6 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../lib/cx";
-import { BoundedSection } from "../../components/BoundedSection";
 
 export type VideoHighlightsSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -33,12 +32,12 @@ export default function VideoHighlights({
 	const activeHighlight = slice.items[activeHighlightIndex];
 
 	return (
-		<BoundedSection
+		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice video-highlights"
+			className="essential-slice bounded video-highlights"
 		>
-			<div className="video-highlights__content">
+			<div className="bounded__content video-highlights__content">
 				<div className="video-highlights__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="video-highlights__intro__eyebrow">
@@ -90,6 +89,6 @@ export default function VideoHighlights({
 					</ul>
 				</div>
 			</div>
-		</BoundedSection>
+		</section>
 	);
 }

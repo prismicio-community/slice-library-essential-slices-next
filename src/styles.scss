@@ -1,6 +1,7 @@
+@use "./mixins" as *;
+
 // Components
 @use "./components/ButtonLink";
-@use "./components/BoundedSection";
 
 // Slices
 @use "./slices/CallToAction";
@@ -12,4 +13,25 @@
 
 .essential-slice {
 	font-family: "Inter", system-ui, sans-serif;
+}
+
+.bounded {
+	padding: 8vw 2rem;
+
+	&__content {
+		margin-left: auto;
+		margin-right: auto;
+
+		@include md {
+			max-width: 90%;
+		}
+
+		@include lg {
+			max-width: 80%;
+		}
+
+		@include xl {
+			max-width: 75%;
+		}
+	}
 }

@@ -8,7 +8,6 @@ import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../lib/cx";
 import { ButtonLink } from "../../components/ButtonLink";
-import { BoundedSection } from "../../components/BoundedSection";
 
 export type PricingTableSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -78,12 +77,12 @@ export default function PricingTable({
 	slice,
 }: SliceComponentProps<PricingTableSlice>) {
 	return (
-		<BoundedSection
+		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice pricing-table"
+			className="essential-slice bounded pricing-table"
 		>
-			<div className="pricing-table__content">
+			<div className="bounded__content pricing-table__content">
 				<div className="pricing-table__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="pricing-table__intro__eyebrow">
@@ -122,6 +121,6 @@ export default function PricingTable({
 					</ul>
 				)}
 			</div>
-		</BoundedSection>
+		</section>
 	);
 }
