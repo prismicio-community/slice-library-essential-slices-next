@@ -3,3 +3,4 @@
 export { default as CallToAction } from './CallToAction'
 export { default as CustomerLogos } from './CustomerLogos'
 export { default as PricingTable } from './PricingTable'
+export { default as VideoHighlights } from './VideoHighlights'

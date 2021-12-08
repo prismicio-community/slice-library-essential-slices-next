@@ -1,0 +1,61 @@
+{
+  "id": "video_highlights",
+  "type": "SharedSlice",
+  "name": "VideoHighlights",
+  "description": "VideoHighlights",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "VideoHighlights",
+      "primary": {
+        "eyebrowHeadline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Eyebrow Headline",
+            "placeholder": "To be displayed before title",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title",
+            "placeholder": "Video Highlights"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, strong, em, hyperlink",
+            "allowTargetBlank": true,
+            "label": "Description",
+            "placeholder": "These are some awesome videos ..."
+          }
+        }
+      },
+      "items": {
+        "videoTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Video Title",
+            "placeholder": "My awesome video",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "videoSource": {
+          "type": "Embed",
+          "config": {
+            "label": "Video Source",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

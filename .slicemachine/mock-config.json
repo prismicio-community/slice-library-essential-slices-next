@@ -35,6 +35,26 @@
           }
         }
       }
+    },
+    "VideoHighlights": {
+      "default-slice": {
+        "primary": {
+          "eyebrowHeadline": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "videoTitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }
