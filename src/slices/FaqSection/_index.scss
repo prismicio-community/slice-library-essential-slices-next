@@ -1,0 +1,131 @@
+@use "../../mixins" as *;
+
+.faq-section {
+	background-color: #fff;
+	color: #333;
+
+	&__content {
+		display: grid;
+		gap: 2rem;
+
+		@include md {
+			gap: 3rem;
+		}
+
+		@include xl {
+			gap: 5rem;
+		}
+	}
+
+	&__intro {
+		display: grid;
+		gap: 1rem;
+		justify-content: center;
+
+		&__eyebrow {
+			color: #8592e0;
+			font-size: 1.15rem;
+			font-weight: 500;
+			text-align: center;
+			max-width: 38rem;
+		}
+
+		&__headline {
+			font-size: 1.625rem;
+			font-weight: 700;
+			text-align: center;
+
+			@include md {
+				font-size: 2rem;
+			}
+
+			@include lg {
+				font-size: 2.5rem;
+			}
+
+			@include xl {
+				font-size: 2.75rem;
+			}
+		}
+
+		&__description {
+			font-size: 1.15rem;
+			text-align: center;
+			max-width: 38rem;
+
+			@include xl {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__primary-content {
+		display: grid;
+		gap: 1.5rem;
+		grid-auto-flow: dense;
+		align-items: start;
+
+		&--with-image {
+			@include md {
+				grid-template-columns: 2fr 3fr;
+				gap: 4rem;
+			}
+
+			@include xl {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		&__questions {
+			display: grid;
+			gap: 1rem;
+		}
+	}
+
+	&__question {
+		background-color: #f4f0ec;
+		border-radius: 0.5rem;
+
+		&__toggler {
+			align-items: center;
+			display: grid;
+			gap: 2rem;
+			grid-template-columns: 1fr auto;
+			padding: 1.25rem;
+			text-align: left;
+			width: 100%;
+
+			&__label {
+				font-weight: 700;
+			}
+
+			&__icon {
+				width: 0.75rem;
+			}
+		}
+
+		&__content {
+			display: none;
+			padding: 0 1.25rem 1.25rem;
+			pointer-events: none;
+			font-size: 0.9rem;
+
+			&--open {
+				display: block;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&__chevron {
+		transition: transform 200ms ease-in-out;
+
+		&--up {
+			transform: rotate(180deg);
+		}
+
+		&--down {
+			transform: rotate(0deg);
+		}
+	}
+}

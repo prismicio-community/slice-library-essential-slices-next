@@ -1,0 +1,70 @@
+{
+  "id": "faq_section",
+  "type": "SharedSlice",
+  "name": "FaqSection",
+  "description": "FaqSection",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FaqSection",
+      "primary": {
+        "eyebrowHeadline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Eyebrow Headline",
+            "placeholder": "To be displayed before title",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Title",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, strong, em, hyperlink",
+            "allowTargetBlank": true,
+            "label": "Description"
+          }
+        },
+        "optionalImage": {
+          "type": "Image",
+          "config": {
+            "label": "Optional Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Title",
+            "placeholder": "Which browsers do you support?"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, preformatted, strong, em, hyperlink, list-item, o-list-item",
+            "allowTargetBlank": true,
+            "label": "Text",
+            "placeholder": "The answer to the question"
+          }
+        }
+      }
+    }
+  ]
+}

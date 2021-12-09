@@ -33,13 +33,13 @@
   grid-auto-flow: dense;
 }
 @media screen and (min-width: 640px) {
-  .alternate-grid__content {
+  .alternate-grid__content--with-image {
     grid-template-columns: 2fr 3fr;
     gap: 4rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .alternate-grid__content {
+  .alternate-grid__content--with-image {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -86,6 +86,7 @@
 }
 .alternate-grid__primary-content__intro__description {
   font-size: 1.15rem;
+  max-width: 38rem;
 }
 @media screen and (min-width: 1280px) {
   .alternate-grid__primary-content__intro__description {
@@ -222,6 +223,126 @@
   .customer-logos__button {
     justify-self: center;
   }
+}
+
+.faq-section {
+  background-color: #fff;
+  color: #333;
+}
+.faq-section__content {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .faq-section__content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .faq-section__content {
+    gap: 5rem;
+  }
+}
+.faq-section__intro {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+.faq-section__intro__eyebrow {
+  color: #8592e0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 38rem;
+}
+.faq-section__intro__headline {
+  font-size: 1.625rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 640px) {
+  .faq-section__intro__headline {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 896px) {
+  .faq-section__intro__headline {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .faq-section__intro__headline {
+    font-size: 2.75rem;
+  }
+}
+.faq-section__intro__description {
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 38rem;
+}
+@media screen and (min-width: 1280px) {
+  .faq-section__intro__description {
+    font-size: 1.4rem;
+  }
+}
+.faq-section__primary-content {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+  align-items: start;
+}
+@media screen and (min-width: 640px) {
+  .faq-section__primary-content--with-image {
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .faq-section__primary-content--with-image {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.faq-section__primary-content__questions {
+  display: grid;
+  gap: 1rem;
+}
+.faq-section__question {
+  background-color: #f4f0ec;
+  border-radius: 0.5rem;
+}
+.faq-section__question__toggler {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr auto;
+  padding: 1.25rem;
+  text-align: left;
+  width: 100%;
+}
+.faq-section__question__toggler__label {
+  font-weight: 700;
+}
+.faq-section__question__toggler__icon {
+  width: 0.75rem;
+}
+.faq-section__question__content {
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  pointer-events: none;
+  font-size: 0.9rem;
+}
+.faq-section__question__content--open {
+  display: block;
+  pointer-events: auto;
+}
+.faq-section__chevron {
+  transition: transform 200ms ease-in-out;
+}
+.faq-section__chevron--up {
+  transform: rotate(180deg);
+}
+.faq-section__chevron--down {
+  transform: rotate(0deg);
 }
 
 .pricing-table {

@@ -36,7 +36,14 @@ export default function AlternateGrid({
 			data-slice-variation={slice.variation}
 			className="essential-slice bounded alternate-grid"
 		>
-			<div className="bounded__content alternate-grid__content">
+			<div
+				className={cx(
+					"bounded__content",
+					"alternate-grid__content",
+					slice.primary.optionalImage.url &&
+						"alternate-grid__content--with-image",
+				)}
+			>
 				{slice.primary.optionalImage.url && (
 					<img
 						src={slice.primary.optionalImage.url}

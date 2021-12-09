@@ -9,13 +9,15 @@
 		gap: 1.5rem;
 		grid-auto-flow: dense;
 
-		@include md {
-			grid-template-columns: 2fr 3fr;
-			gap: 4rem;
-		}
+		&--with-image {
+			@include md {
+				grid-template-columns: 2fr 3fr;
+				gap: 4rem;
+			}
 
-		@include xl {
-			grid-template-columns: repeat(2, 1fr);
+			@include xl {
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
 	}
 
@@ -64,6 +66,7 @@
 
 			&__description {
 				font-size: 1.15rem;
+				max-width: 38rem;
 
 				@include xl {
 					font-size: 1.4rem;

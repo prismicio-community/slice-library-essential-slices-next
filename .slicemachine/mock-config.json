@@ -93,6 +93,24 @@
           }
         }
       }
+    },
+    "FaqSection": {
+      "default-slice": {
+        "primary": {
+          "eyebrowHeadline": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }
