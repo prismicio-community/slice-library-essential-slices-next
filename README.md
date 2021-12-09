@@ -21,15 +21,15 @@ The same command can be used to add the Slice Library to an existing Slice Machi
 Import `reset.css` and `styles.css` in `pages/_app.js`:
 
 ```js
-import "../src/reset.css";
-import "../src/styles.css";
+import "../essential-slices/reset.css";
+import "../essential-slices/styles.css";
 ```
 
 If you don't have a `pages/_app.js` file, you can create a new file with these contents:
 
 ```js
-import "../src/reset.css";
-import "../src/styles.css";
+import "../essential-slices/reset.css";
+import "../essential-slices/styles.css";
 
 export default function App({ Component, pageProps }) {
 	return <Component {...pageProps} />;
