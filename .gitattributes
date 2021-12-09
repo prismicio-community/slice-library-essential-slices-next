@@ -3,3 +3,4 @@ package-lock.json -diff
 yarn.lock -diff
 src/styles.css -diff
 src/styles.css.map -diff
+.slicemachine/libraries-state.json -diff
