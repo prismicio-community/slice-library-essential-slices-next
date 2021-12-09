@@ -15,21 +15,25 @@
 	"dependencies": {
 		"@prismicio/helpers": "^2.0.0-beta.7",
 		"@prismicio/react": "^2.0.0",
-		"@prismicio/slice-canvas-renderer-react": "0.0.5",
-		"clsx": "^1.1.1",
-		"keen-slider": "^6.3.4",
-		"next": "^12.0.7",
-		"react": "17.0.2",
-		"react-dom": "17.0.2",
-		"sass": "^1.44.0"
+		"keen-slider": "^6.3.4"
+	},
+	"peerDependencies": {
+		"next": "^12",
+		"react": "^17",
+		"react-dom": "^17"
 	},
 	"devDependencies": {
+		"@prismicio/slice-canvas-renderer-react": "0.0.5",
 		"@prismicio/types": "^0.1.19",
 		"concurrently": "^6.4.0",
 		"eslint": "^8.4.0",
 		"eslint-config-next": "^12.0.7",
+		"next": "^12.0.7",
 		"prettier": "^2.5.1",
 		"prettier-plugin-jsdoc": "^0.3.30",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"sass": "^1.44.0",
 		"slice-machine-ui": "0.1.2-slicecanvas.4"
 	}
 }
