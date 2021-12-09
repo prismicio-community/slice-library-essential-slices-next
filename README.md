@@ -2,9 +2,6 @@
 
 A nicely made Slice Library for [Next.js][nextjs].
 
-- ⬛ Built with [Theme UI][theme-ui]
-- ⚛️ Configurable with [`@prismicio/react`][prismic-react]
-
 ## Demo
 
 <a href="#"><img src="https://angeloashmore-slicemachine-intro.cdn.prismic.io/angeloashmore-slicemachine-intro/49ca4bde-b36a-42f4-a072-60d2e5202f85_try-button.svg" alt="Try on Slice Showcase" width="200" /></a>
@@ -21,50 +18,25 @@ The same command can be used to add the Slice Library to an existing Slice Machi
 
 ## Post-Install Setup
 
-1. Install [Theme UI][theme-ui].
+Import `reset.css` and `styles.css` in `pages/_app.js`:
 
-   ```bash
-   npm install theme-ui
-   ```
+```js
+import "../src/reset.css";
+import "../src/styles.css";
+```
 
-2. Add `<ThemeProvider>` and `<PrismicProvider>` to `pages/_app.js`.
+If you don't have a `pages/_app.js` file, you can create a new file with these contents:
 
-   ```jsx
-   // pages/_app.js
+```js
+import "../src/reset.css";
+import "../src/styles.css";
 
-   import { ThemeProvider } from "theme-ui";
-   import { PrismicProvider } from "@prismicio/react";
-   import { PrismicNextLink } from "@prismicio/next";
-
-   import theme from "../slices/slice-library-essential-slices/theme";
-
-   function App({ Component, pageProps }) {
-   	return (
-   		<ThemeProvider theme={theme}>
-   			<PrismicProvider internalLinkComponent={PrismicNextLink}>
-   				<Component {...pageProps} />
-   			</PrismicProvider>
-   		</ThemeProvider>
-   	);
-   }
-
-   export default App;
-   ```
-
-3. If your app uses a [Link Resolver][link-resolver], add it to `<PrismicProvider>` in `pages/_app.js`.
-
-   ```jsx
-   // pages/_app.js
-
-   import { linkResolver } from "../linkResolver";
-
-   <PrismicProvider linkResolver={linkResolver}>
-   	{/* ...children... */}
-   </PrismicProvider>;
-   ```
+export default function App({ Component, pageProps }) {
+	return <Component {...pageProps} />;
+}
+```
 
 [nextjs]: https://nextjs.org/
-[theme-ui]: https://theme-ui.com/
 [prismic-react]: https://github.com/prismicio/prismic-react/tree/v2
 [slicemachine]: https://slicemachine.dev/
 [link-resolver]: https://prismic.io/docs/core-concepts/link-resolver-route-resolver
