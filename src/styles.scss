@@ -4,6 +4,7 @@
 @use "./components/ButtonLink";
 
 // Slices
+@use "./slices/AlternateGrid";
 @use "./slices/CallToAction";
 @use "./slices/CustomerLogos";
 @use "./slices/PricingTable";

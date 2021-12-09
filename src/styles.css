@@ -23,6 +23,100 @@
   background-color: #0d5e4c;
 }
 
+.alternate-grid {
+  background-color: #fff;
+  color: #333;
+}
+.alternate-grid__content {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+}
+@media screen and (min-width: 640px) {
+  .alternate-grid__content {
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .alternate-grid__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.alternate-grid__image {
+  align-self: center;
+}
+.alternate-grid__image--left {
+  grid-column: 1;
+}
+.alternate-grid__image--right {
+  grid-column: 2;
+}
+.alternate-grid__primary-content {
+  display: grid;
+  gap: 2rem;
+}
+.alternate-grid__primary-content__intro {
+  display: grid;
+  gap: 0.5rem;
+}
+.alternate-grid__primary-content__intro__eyebrow {
+  color: #8592e0;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.alternate-grid__primary-content__intro__headline {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 640px) {
+  .alternate-grid__primary-content__intro__headline {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 896px) {
+  .alternate-grid__primary-content__intro__headline {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .alternate-grid__primary-content__intro__headline {
+    font-size: 2.75rem;
+  }
+}
+.alternate-grid__primary-content__intro__description {
+  font-size: 1.15rem;
+}
+@media screen and (min-width: 1280px) {
+  .alternate-grid__primary-content__intro__description {
+    font-size: 1.4rem;
+  }
+}
+.alternate-grid__primary-content__items {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .alternate-grid__primary-content__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.alternate-grid__item {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+.alternate-grid__item__icon {
+  max-height: 3rem;
+}
+.alternate-grid__item__heading {
+  font-weight: 700;
+  font-size: 1.17rem;
+}
+.alternate-grid__item__description {
+  font-size: 0.9rem;
+}
+
 .call-to-action {
   background-color: #fff;
   color: #333;

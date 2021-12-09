@@ -1,0 +1,102 @@
+@use "../../mixins" as *;
+
+.alternate-grid {
+	background-color: #fff;
+	color: #333;
+
+	&__content {
+		display: grid;
+		gap: 1.5rem;
+		grid-auto-flow: dense;
+
+		@include md {
+			grid-template-columns: 2fr 3fr;
+			gap: 4rem;
+		}
+
+		@include xl {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__image {
+		align-self: center;
+
+		&--left {
+			grid-column: 1;
+		}
+
+		&--right {
+			grid-column: 2;
+		}
+	}
+
+	&__primary-content {
+		display: grid;
+		gap: 2rem;
+
+		&__intro {
+			display: grid;
+			gap: 0.5rem;
+
+			&__eyebrow {
+				color: #8592e0;
+				font-size: 1.15rem;
+				font-weight: 500;
+			}
+
+			&__headline {
+				font-size: 1.625rem;
+				font-weight: 700;
+
+				@include md {
+					font-size: 2rem;
+				}
+
+				@include lg {
+					font-size: 2.5rem;
+				}
+
+				@include xl {
+					font-size: 2.75rem;
+				}
+			}
+
+			&__description {
+				font-size: 1.15rem;
+
+				@include xl {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		&__items {
+			display: grid;
+			gap: 2rem;
+
+			@include md {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+
+	&__item {
+		display: grid;
+		gap: 1rem;
+		align-content: start;
+
+		&__icon {
+			max-height: 3rem;
+		}
+
+		&__heading {
+			font-weight: 700;
+			font-size: 1.17rem;
+		}
+
+		&__description {
+			font-size: 0.9rem;
+		}
+	}
+}
