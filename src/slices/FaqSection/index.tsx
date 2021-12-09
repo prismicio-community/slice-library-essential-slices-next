@@ -8,6 +8,7 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../lib/cx";
+import { ChevronIcon } from "../../components/ChevronIcon";
 
 export type FaqSectionSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -26,30 +27,6 @@ export type FaqSectionSlice = prismicT.SharedSlice<
 	>
 >;
 
-type ChevronProps = {
-	direction: "up" | "down";
-	className?: string;
-} & React.SVGProps<SVGSVGElement>;
-
-function Chevron({ direction, className, ...props }: ChevronProps) {
-	return (
-		<svg
-			viewBox="0 0 12 8"
-			className={cx(
-				"faq-section__chevron",
-				`faq-section__chevron--${direction}`,
-				className,
-			)}
-			{...props}
-		>
-			<g fill="none">
-				<path fill="currentColor" d="M1.41.59 6 5.17 10.59.59 12 2 6 8 0 2z" />
-				<path d="M-6-8h24v24H-6z" />
-			</g>
-		</svg>
-	);
-}
-
 type QuestionProps = {
 	title: prismicT.TitleField;
 	text: prismicT.RichTextField;
@@ -67,7 +44,7 @@ function Question({ title, text }: QuestionProps) {
 				<span className="faq-section__question__toggler__label">
 					<PrismicText field={title} />
 				</span>
-				<Chevron
+				<ChevronIcon
 					direction={isOpen ? "up" : "down"}
 					aria-hidden={true}
 					className="faq-section__question__toggler__icon"

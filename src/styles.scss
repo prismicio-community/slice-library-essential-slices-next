@@ -1,11 +1,16 @@
 @use "./mixins" as *;
 
+// Dependencies
+@use "../node_modules/keen-slider/keen-slider.min.css";
+
 // Components
 @use "./components/ButtonLink";
+@use "./components/ChevronIcon";
 
 // Slices
 @use "./slices/AlternateGrid";
 @use "./slices/CallToAction";
+@use "./slices/CardsCarousel";
 @use "./slices/CustomerLogos";
 @use "./slices/FaqSection";
 @use "./slices/PricingTable";

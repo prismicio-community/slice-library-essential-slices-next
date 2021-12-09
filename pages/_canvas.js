@@ -7,6 +7,7 @@ import * as slices from "../src/slices";
 const components = {
 	alternate_grid: slices.AlternateGrid,
 	call_to_action: slices.CallToAction,
+	cards_carousel: slices.CardsCarousel,
 	customer_logos: slices.CustomerLogos,
 	faq_section: slices.FaqSection,
 	pricing_table: slices.PricingTable,
