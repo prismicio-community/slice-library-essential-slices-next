@@ -520,6 +520,120 @@
   pointer-events: auto;
 }
 
+.images-slider {
+  background-color: #fff;
+  color: #333;
+}
+.images-slider__content {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 640px) {
+  .images-slider__content {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .images-slider__content {
+    gap: 5rem;
+  }
+}
+.images-slider__intro {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .images-slider__intro {
+    justify-items: center;
+  }
+}
+.images-slider__intro__eyebrow {
+  color: #8592e0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  max-width: 38rem;
+}
+@media screen and (min-width: 640px) {
+  .images-slider__intro__eyebrow {
+    text-align: center;
+  }
+}
+.images-slider__intro__headline {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 640px) {
+  .images-slider__intro__headline {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 896px) {
+  .images-slider__intro__headline {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .images-slider__intro__headline {
+    font-size: 2.75rem;
+  }
+}
+.images-slider__intro__description {
+  font-size: 1.15rem;
+  max-width: 38rem;
+}
+@media screen and (min-width: 640px) {
+  .images-slider__intro__description {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .images-slider__intro__description {
+    font-size: 1.4rem;
+  }
+}
+.images-slider__slider {
+  overflow: hidden;
+  display: grid;
+  gap: 2rem;
+}
+.images-slider__slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.images-slider__slider__control {
+  padding: 0.75rem;
+}
+.images-slider__slider__control__dot {
+  background-color: #333;
+  border-radius: 50%;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.images-slider__slider__control__dot--active {
+  background-color: #16745f;
+}
+.images-slider__slide {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+.images-slider__slide__image {
+  width: 100%;
+  max-width: 840px;
+}
+.images-slider__slide__description {
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 38rem;
+}
+@media screen and (min-width: 1280px) {
+  .images-slider__slide__description {
+    font-size: 1.4rem;
+  }
+}
+
 .pricing-table {
   background-color: #fff;
   color: #333;

@@ -124,6 +124,18 @@
         },
         "items": {}
       }
+    },
+    "ImagesSlider": {
+      "default-slice": {
+        "primary": {
+          "eyebrowHeadline": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

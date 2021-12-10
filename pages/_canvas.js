@@ -10,6 +10,8 @@ const components = {
 	cards_carousel: slices.CardsCarousel,
 	customer_logos: slices.CustomerLogos,
 	faq_section: slices.FaqSection,
+	image_slider: slices.ImagesSlider,
+	images_slider: slices.ImagesSlider,
 	pricing_table: slices.PricingTable,
 	video_highlights: slices.VideoHighlights,
 };

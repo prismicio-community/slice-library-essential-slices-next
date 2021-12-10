@@ -1,0 +1,118 @@
+@use "../../mixins" as *;
+
+.images-slider {
+	background-color: #fff;
+	color: #333;
+
+	&__content {
+		display: grid;
+		gap: 2rem;
+
+		@include md {
+			gap: 3rem;
+		}
+
+		@include xl {
+			gap: 5rem;
+		}
+	}
+
+	&__intro {
+		display: grid;
+		gap: 1rem;
+
+		@include md {
+			justify-items: center;
+		}
+
+		&__eyebrow {
+			color: #8592e0;
+			font-size: 1.15rem;
+			font-weight: 500;
+			max-width: 38rem;
+
+			@include md {
+				text-align: center;
+			}
+		}
+
+		&__headline {
+			font-size: 1.625rem;
+			font-weight: 700;
+
+			@include md {
+				font-size: 2rem;
+				text-align: center;
+			}
+
+			@include lg {
+				font-size: 2.5rem;
+			}
+
+			@include xl {
+				font-size: 2.75rem;
+			}
+		}
+
+		&__description {
+			font-size: 1.15rem;
+			max-width: 38rem;
+
+			@include md {
+				text-align: center;
+			}
+
+			@include xl {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__slider {
+		overflow: hidden;
+		display: grid;
+		gap: 2rem;
+
+		&__controls {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__control {
+			padding: 0.75rem;
+
+			&__dot {
+				background-color: #333;
+				border-radius: 50%;
+				height: 0.75rem;
+				width: 0.75rem;
+
+				&--active {
+					background-color: #16745f;
+				}
+			}
+		}
+	}
+
+	&__slide {
+		display: grid;
+		gap: 2rem;
+		justify-items: center;
+
+		&__image {
+			width: 100%;
+			max-width: 840px;
+		}
+
+		&__description {
+			font-size: 1.15rem;
+			text-align: center;
+			max-width: 38rem;
+
+			@include xl {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
