@@ -1,6 +1,6 @@
 @use "../../mixins" as *;
 
-.pricing-table {
+.es-pricing-table {
 	background-color: #fff;
 	color: #333;
 
@@ -61,46 +61,46 @@
 			height: 100%;
 		}
 	}
-}
 
-.plan-card {
-	align-content: flex-start;
-	border-radius: 0.5rem;
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-
-	&--beige {
-		background-color: #f4f0ec;
-		border: 1px solid #f4f0ec;
-		color: #333;
-	}
-
-	&--white {
-		background-color: #fff;
-		border: 1px solid #333;
-		color: #333;
-	}
-
-	&__content {
+	&__plan-card {
 		align-content: flex-start;
-		display: grid;
-		flex-grow: 1;
-		gap: 1rem;
-		margin-bottom: 1.5rem;
+		border-radius: 0.5rem;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
 
-		&__title {
-			font-size: 1.17rem;
-			font-weight: 700;
+		&--beige {
+			background-color: #f4f0ec;
+			border: 1px solid #f4f0ec;
+			color: #333;
 		}
 
-		&__price {
-			color: #878787;
-			font-size: 0.9rem;
+		&--white {
+			background-color: #fff;
+			border: 1px solid #333;
+			color: #333;
 		}
 
-		&__features {
-			font-size: 0.9rem;
+		&__content {
+			align-content: flex-start;
+			display: grid;
+			flex-grow: 1;
+			gap: 1rem;
+			margin-bottom: 1.5rem;
+
+			&__title {
+				font-size: 1.17rem;
+				font-weight: 700;
+			}
+
+			&__price {
+				color: #878787;
+				font-size: 0.9rem;
+			}
+
+			&__features {
+				font-size: 0.9rem;
+			}
 		}
 	}
 }

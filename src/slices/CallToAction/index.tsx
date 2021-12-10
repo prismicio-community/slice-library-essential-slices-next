@@ -29,24 +29,24 @@ export default function CallToAction({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded call-to-action"
+			className="essential-slice es-bounded es-call-to-action"
 		>
-			<div className="bounded__content call-to-action__content">
+			<div className="es-bounded__content es-call-to-action__content">
 				{slice.primary.iconImage.url && (
 					<img
 						src={slice.primary.iconImage.url}
 						alt={slice.primary.iconImage.alt ?? undefined}
-						className="call-to-action__image"
+						className="es-call-to-action__image"
 					/>
 				)}
-				<div className="call-to-action__content">
+				<div className="es-call-to-action__content">
 					{prismicH.asText(slice.primary.title) && (
-						<h2 className="call-to-action__content__heading">
+						<h2 className="es-call-to-action__content__heading">
 							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.paragraph) && (
-						<div className="call-to-action__content__paragraph">
+						<div className="es-call-to-action__content__paragraph">
 							<PrismicRichText field={slice.primary.paragraph} />
 						</div>
 					)}
@@ -54,7 +54,7 @@ export default function CallToAction({
 				<ButtonLink
 					field={slice.primary.buttonLink}
 					variant="green"
-					className="call-to-action__button"
+					className="es-call-to-action__button"
 				>
 					{slice.primary.buttonLabel || "Learn more…"}
 				</ButtonLink>

@@ -8,7 +8,7 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 import { useKeenSlider } from "keen-slider/react";
 
-import { cx } from "../../lib/cx";
+import { cx } from "../../cx";
 import { ChevronIcon } from "../../components/ChevronIcon";
 
 export type TestimonialsSliderSlice = prismicT.SharedSlice<
@@ -38,28 +38,28 @@ type SliderImageProps = {
 
 function Slide({ image, testimonial, person, title }: SliderImageProps) {
 	return (
-		<figure className="testimonials-slider__slide">
+		<figure className="es-testimonials-slider__slide">
 			{image.url && (
 				<img
 					src={image.url}
 					alt={image.alt ?? undefined}
-					className="testimonials-slider__slide__image"
+					className="es-testimonials-slider__slide__image"
 				/>
 			)}
-			<figcaption className="testimonials-slider__slide__testimonial">
+			<figcaption className="es-testimonials-slider__slide__testimonial">
 				{prismicH.asText(testimonial) && (
-					<div className="testimonials-slider__slide__testimonial__content">
+					<div className="es-testimonials-slider__slide__testimonial__content">
 						<PrismicRichText field={testimonial} />
 					</div>
 				)}
-				<div className="testimonials-slider__slide__testimonial__person">
+				<div className="es-testimonials-slider__slide__testimonial__person">
 					{person && (
-						<span className="testimonials-slider__slide__testimonial__person__name">
+						<span className="es-testimonials-slider__slide__testimonial__person__name">
 							{person}
 						</span>
 					)}
 					{title && (
-						<span className="testimonials-slider__slide__testimonial__person__title">
+						<span className="es-testimonials-slider__slide__testimonial__person__title">
 							{title}
 						</span>
 					)}
@@ -88,38 +88,38 @@ export default function TestimonialsSlider({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded testimonials-slider"
+			className="essential-slice es-bounded es-testimonials-slider"
 		>
-			<div className="bounded__content testimonials-slider__content">
-				<div className="testimonials-slider__intro">
+			<div className="es-bounded__content es-testimonials-slider__content">
+				<div className="es-testimonials-slider__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
-						<p className="testimonials-slider__intro__eyebrow">
+						<p className="es-testimonials-slider__intro__eyebrow">
 							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
-						<h2 className="testimonials-slider__intro__headline">
+						<h2 className="es-testimonials-slider__intro__headline">
 							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.paragraph) && (
-						<div className="testimonials-slider__intro__description">
+						<div className="es-testimonials-slider__intro__description">
 							<PrismicRichText field={slice.primary.paragraph} />
 						</div>
 					)}
 				</div>
 				{slice.items.length > 0 && (
-					<div className="testimonials-slider__slider">
+					<div className="es-testimonials-slider__slider">
 						<ul
 							ref={sliderRef}
-							className="testimonials-slider__slider__slides keen-slider"
+							className="es-testimonials-slider__slider__slides keen-slider"
 						>
 							{slice.items.map(
 								(item) =>
 									item.image.url && (
 										<li
 											key={item.image.url}
-											className="testimonials-slider__slider__slide keen-slider__slide"
+											className="es-testimonials-slider__slider__slide keen-slider__slide"
 										>
 											<Slide
 												image={item.image}
@@ -131,7 +131,7 @@ export default function TestimonialsSlider({
 									),
 							)}
 						</ul>
-						<div className="testimonials-slider__slider__controls">
+						<div className="es-testimonials-slider__slider__controls">
 							{slice.items.map(
 								(item, index) =>
 									item.image.url && (
@@ -139,13 +139,13 @@ export default function TestimonialsSlider({
 											key={item.image.url}
 											onClick={() => slider.current?.moveToIdx(index)}
 											aria-label={`Go to slide ${index + 1}`}
-											className="testimonials-slider__slider__dot-control"
+											className="es-testimonials-slider__slider__dot-control"
 										>
 											<div
 												className={cx(
-													"testimonials-slider__slider__dot-control__dot",
+													"es-testimonials-slider__slider__dot-control__dot",
 													activeSlideIndex === index &&
-														"testimonials-slider__slider__dot-control__dot--active",
+														"es-testimonials-slider__slider__dot-control__dot--active",
 												)}
 											/>
 										</button>
@@ -154,23 +154,23 @@ export default function TestimonialsSlider({
 							<button
 								onClick={() => slider.current?.prev()}
 								aria-label="Previous card"
-								className="testimonials-slider__slider__arrow-control testimonials-slider__slider__arrow-control--prev"
+								className="es-testimonials-slider__slider__arrow-control es-testimonials-slider__slider__arrow-control--prev"
 							>
 								<ChevronIcon
 									direction="left"
 									aria-hidden={true}
-									className="testimonials-slider__slider__arrow-control__icon"
+									className="es-testimonials-slider__slider__arrow-control__icon"
 								/>
 							</button>
 							<button
 								onClick={() => slider.current?.next()}
 								aria-label="Next card"
-								className="testimonials-slider__slider__arrow-control testimonials-slider__slider__arrow-control--next"
+								className="es-testimonials-slider__slider__arrow-control es-testimonials-slider__slider__arrow-control--next"
 							>
 								<ChevronIcon
 									direction="right"
 									aria-hidden={true}
-									className="testimonials-slider__slider__arrow-control__icon"
+									className="es-testimonials-slider__slider__arrow-control__icon"
 								/>
 							</button>
 						</div>

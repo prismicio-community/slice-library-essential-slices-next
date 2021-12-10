@@ -66,51 +66,51 @@ export default function CardsCarousel({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded cards-carousel"
+			className="essential-slice es-bounded es-cards-carousel"
 		>
-			<div className="bounded__content cards-carousel__content">
-				<div className="cards-carousel__intro">
+			<div className="es-bounded__content es-cards-carousel__content">
+				<div className="es-cards-carousel__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
-						<p className="cards-carousel__intro__eyebrow">
+						<p className="es-cards-carousel__intro__eyebrow">
 							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
-						<h2 className="cards-carousel__intro__headline">
+						<h2 className="es-cards-carousel__intro__headline">
 							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
-						<div className="cards-carousel__intro__description">
+						<div className="es-cards-carousel__intro__description">
 							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>
 				{slice.items.length > 0 && (
-					<div className="cards-carousel__carousel">
+					<div className="es-cards-carousel__carousel">
 						<div
 							ref={sliderRef}
-							className="cards-carousel__carousel__cards keen-slider"
+							className="es-cards-carousel__carousel__cards keen-slider"
 						>
 							{items.map((item, index) => (
 								<div
 									key={`${prismicH.asText(item.title)}-${index}`}
-									className="cards-carousel__card keen-slider__slide"
+									className="es-cards-carousel__card keen-slider__slide"
 								>
 									{item.image.url && (
 										<img
 											src={item.image.url}
 											alt={item.image.alt ?? undefined}
-											className="cards-carousel__card__image"
+											className="es-cards-carousel__card__image"
 										/>
 									)}
 									{prismicH.asText(item.title) && (
-										<h3 className="cards-carousel__card__title">
+										<h3 className="es-cards-carousel__card__title">
 											<PrismicText field={item.title} />
 										</h3>
 									)}
 									{prismicH.asText(item.content) && (
-										<div className="cards-carousel__card__content">
+										<div className="es-cards-carousel__card__content">
 											<PrismicRichText field={item.content} />
 										</div>
 									)}
@@ -120,23 +120,23 @@ export default function CardsCarousel({
 						<button
 							onClick={() => slider.current?.prev()}
 							aria-label="Previous card"
-							className="cards-carousel__carousel__control cards-carousel__carousel__control--prev"
+							className="es-cards-carousel__carousel__control es-cards-carousel__carousel__control--prev"
 						>
 							<ChevronIcon
 								direction="left"
 								aria-hidden={true}
-								className="cards-carousel__carousel__control__icon"
+								className="es-cards-carousel__carousel__control__icon"
 							/>
 						</button>
 						<button
 							onClick={() => slider.current?.next()}
 							aria-label="Next card"
-							className="cards-carousel__carousel__control cards-carousel__carousel__control--next"
+							className="es-cards-carousel__carousel__control es-cards-carousel__carousel__control--next"
 						>
 							<ChevronIcon
 								direction="right"
 								aria-hidden={true}
-								className="cards-carousel__carousel__control__icon"
+								className="es-cards-carousel__carousel__control__icon"
 							/>
 						</button>
 					</div>

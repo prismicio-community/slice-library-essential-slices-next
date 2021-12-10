@@ -18,7 +18,7 @@ export function ButtonLink<
 }: ButtonLinkProps<LinkResolverFunction>) {
 	return (
 		<PrismicLink
-			className={clsx("button", `button--${variant}`, className)}
+			className={clsx("es-button", `es-button--${variant}`, className)}
 			{...restProps}
 		>
 			{children}

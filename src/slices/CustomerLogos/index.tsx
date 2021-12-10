@@ -31,28 +31,28 @@ export default function CustomerLogos({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded customer-logos"
+			className="essential-slice es-bounded es-customer-logos"
 		>
-			<div className="bounded__content customer-logos__content">
+			<div className="es-bounded__content es-customer-logos__content">
 				{prismicH.asText(slice.primary.eyebrowHeadline) && (
-					<h2 className="customer-logos__heading">
+					<h2 className="es-customer-logos__heading">
 						<PrismicText field={slice.primary.eyebrowHeadline} />
 					</h2>
 				)}
 				{slice.items.length > 0 && (
-					<ul className="customer-logos__logos">
+					<ul className="es-customer-logos__logos">
 						{slice.items.map(
 							(item) =>
 								item.logo.url && (
-									<li key={item.logo.url} className="customer-logos__logo">
+									<li key={item.logo.url} className="es-customer-logos__logo">
 										<PrismicLink
 											field={item.link}
-											className="customer-logos__link"
+											className="es-customer-logos__link"
 										>
 											<img
 												src={item.logo.url}
 												alt={item.logo.alt ?? undefined}
-												className="customer-logos__logo__link__image"
+												className="es-customer-logos__logo__link__image"
 											/>
 										</PrismicLink>
 									</li>
@@ -62,7 +62,7 @@ export default function CustomerLogos({
 				)}
 				<ButtonLink
 					field={slice.primary.callToActionLink}
-					className="customer-logos__button"
+					className="es-customer-logos__button"
 				>
 					{prismicH.asText(slice.primary.callToAction) || "Learn more"}
 				</ButtonLink>

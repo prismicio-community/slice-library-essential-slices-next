@@ -1,4 +1,4 @@
-import { cx } from "../lib/cx";
+import { cx } from "../cx";
 
 type ChevronIconProps = {
 	direction: "up" | "down" | "left" | "right";
@@ -13,7 +13,11 @@ export function ChevronIcon({
 	return (
 		<svg
 			viewBox="0 0 12 8"
-			className={cx("chevron-icon", `chevron-icon--${direction}`, className)}
+			className={cx(
+				"es-chevron-icon",
+				`es-chevron-icon--${direction}`,
+				className,
+			)}
 			{...props}
 		>
 			<g fill="none">

@@ -8,7 +8,7 @@ import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 import { useKeenSlider } from "keen-slider/react";
 
-import { cx } from "../../lib/cx";
+import { cx } from "../../cx";
 
 export type ImagesSliderSlice = prismicT.SharedSlice<
 	"image_slider",
@@ -33,16 +33,16 @@ type SliderImageProps = {
 
 function Slide({ image, description }: SliderImageProps) {
 	return (
-		<figure className="images-slider__slide">
+		<figure className="es-images-slider__slide">
 			{image.url && (
 				<img
 					src={image.url}
 					alt={image.alt ?? undefined}
-					className="images-slider__slide__image"
+					className="es-images-slider__slide__image"
 				/>
 			)}
 			{prismicH.asText(description) && (
-				<figcaption className="images-slider__slide__description">
+				<figcaption className="es-images-slider__slide__description">
 					<PrismicRichText field={description} />
 				</figcaption>
 			)}
@@ -66,38 +66,38 @@ export default function ImagesSlider({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded images-slider"
+			className="essential-slice es-bounded es-images-slider"
 		>
-			<div className="bounded__content images-slider__content">
-				<div className="images-slider__intro">
+			<div className="es-bounded__content es-images-slider__content">
+				<div className="es-images-slider__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
-						<p className="images-slider__intro__eyebrow">
+						<p className="es-images-slider__intro__eyebrow">
 							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
-						<h2 className="images-slider__intro__headline">
+						<h2 className="es-images-slider__intro__headline">
 							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
-						<div className="images-slider__intro__description">
+						<div className="es-images-slider__intro__description">
 							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>
 				{slice.items.length > 0 && (
-					<div className="images-slider__slider">
+					<div className="es-images-slider__slider">
 						<ul
 							ref={sliderRef}
-							className="images-slider__slider__slides keen-slider"
+							className="es-images-slider__slider__slides keen-slider"
 						>
 							{slice.items.map(
 								(item) =>
 									item.image.url && (
 										<li
 											key={item.image.url}
-											className="images-slider__slider__slide keen-slider__slide"
+											className="es-images-slider__slider__slide keen-slider__slide"
 										>
 											<Slide
 												image={item.image}
@@ -107,7 +107,7 @@ export default function ImagesSlider({
 									),
 							)}
 						</ul>
-						<div className="images-slider__slider__controls">
+						<div className="es-images-slider__slider__controls">
 							{slice.items.map(
 								(item, index) =>
 									item.image.url && (
@@ -115,13 +115,13 @@ export default function ImagesSlider({
 											key={item.image.url}
 											onClick={() => slider.current?.moveToIdx(index)}
 											aria-label={`Go to slide ${index + 1}`}
-											className="images-slider__slider__control"
+											className="es-images-slider__slider__control"
 										>
 											<div
 												className={cx(
-													"images-slider__slider__control__dot",
+													"es-images-slider__slider__control__dot",
 													activeSlideIndex === index &&
-														"images-slider__slider__control__dot--active",
+														"es-images-slider__slider__control__dot--active",
 												)}
 											/>
 										</button>

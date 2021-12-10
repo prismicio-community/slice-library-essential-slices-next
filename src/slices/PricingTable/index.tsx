@@ -6,7 +6,7 @@ import {
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
-import { cx } from "../../lib/cx";
+import { cx } from "../../cx";
 import { ButtonLink } from "../../components/ButtonLink";
 
 export type PricingTableSlice = prismicT.SharedSlice<
@@ -48,25 +48,34 @@ function PlanCard({
 	className,
 }: PlanCardProps) {
 	return (
-		<div className={cx("plan-card", `plan-card--${variant}`, className)}>
-			<div className="plan-card__content">
+		<div
+			className={cx(
+				"es-pricing-table__plan-card",
+				`es-pricing-table__plan-card--${variant}`,
+				className,
+			)}
+		>
+			<div className="es-pricing-table__plan-card__content">
 				{prismicH.asText(title) && (
-					<h3 className="plan-card__content__title">
+					<h3 className="es-pricing-table__plan-card__content__title">
 						<PrismicText field={title} />
 					</h3>
 				)}
 				{prismicH.asText(priceOption) && (
-					<p className="plan-card__content__price">
+					<p className="es-pricing-table__plan-card__content__price">
 						<PrismicText field={priceOption} />
 					</p>
 				)}
 				{prismicH.asText(features) && (
-					<div className="plan-card__content__features">
+					<div className="es-pricing-table__plan-card__content__features">
 						<PrismicRichText field={features} />
 					</div>
 				)}
 			</div>
-			<ButtonLink field={callToAction} className="plan-card__button">
+			<ButtonLink
+				field={callToAction}
+				className="es-pricing-table__plan-card__button"
+			>
 				{prismicH.asText(callToActionText) || "Learn more…"}
 			</ButtonLink>
 		</div>
@@ -80,32 +89,32 @@ export default function PricingTable({
 		<section
 			data-slice-type={slice.slice_type}
 			data-slice-variation={slice.variation}
-			className="essential-slice bounded pricing-table"
+			className="essential-slice es-bounded es-pricing-table"
 		>
-			<div className="bounded__content pricing-table__content">
-				<div className="pricing-table__intro">
+			<div className="es-bounded__content es-pricing-table__content">
+				<div className="es-pricing-table__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
-						<p className="pricing-table__intro__eyebrow">
+						<p className="es-pricing-table__intro__eyebrow">
 							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
-						<h2 className="pricing-table__intro__headline">
+						<h2 className="es-pricing-table__intro__headline">
 							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
-						<div className="pricing-table__intro__description">
+						<div className="es-pricing-table__intro__description">
 							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>
 				{slice.items.length > 0 && (
-					<ul className="pricing-table__plans">
+					<ul className="es-pricing-table__plans">
 						{slice.items.map((item, i) => (
 							<li
 								key={prismicH.asText(item.planTitle)}
-								className="pricing-table__plan"
+								className="es-pricing-table__plan"
 							>
 								<PlanCard
 									variant={i % 2 ? "white" : "beige"}
@@ -114,7 +123,7 @@ export default function PricingTable({
 									features={item.features}
 									callToAction={item.callToAction}
 									callToActionText={item.callToActionText}
-									className="pricing-table__plan__card"
+									className="es-pricing-table__plan__card"
 								/>
 							</li>
 						))}
