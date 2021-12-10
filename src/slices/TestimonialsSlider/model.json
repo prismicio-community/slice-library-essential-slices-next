@@ -1,0 +1,71 @@
+{
+  "id": "testimonials_slider",
+  "type": "SharedSlice",
+  "name": "TestimonialsSlider",
+  "description": "TestimonialsSlider",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TestimonialsSlider",
+      "primary": {
+        "eyebrowHeadline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Eyebrow Headline",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+            "label": "Title"
+          }
+        },
+        "paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+            "label": "Paragraph"
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "thumbnails": [],
+            "label": "Image"
+          }
+        },
+        "testimonial": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+            "label": "Testimonial"
+          }
+        },
+        "person": {
+          "type": "Text",
+          "config": {
+            "label": "Person",
+            "placeholder": "Their full name"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "Their title"
+          }
+        }
+      }
+    }
+  ]
+}

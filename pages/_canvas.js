@@ -13,6 +13,7 @@ const components = {
 	image_slider: slices.ImagesSlider,
 	images_slider: slices.ImagesSlider,
 	pricing_table: slices.PricingTable,
+	testimonials_slider: slices.TestimonialsSlider,
 	video_highlights: slices.VideoHighlights,
 };
 

@@ -1,0 +1,193 @@
+@use "../../mixins" as *;
+
+.testimonials-slider {
+	background-color: #fff;
+	color: #333;
+
+	&__content {
+		display: grid;
+		gap: 2rem;
+
+		@include md {
+			gap: 3rem;
+		}
+
+		@include xl {
+			gap: 5rem;
+		}
+	}
+
+	&__intro {
+		display: grid;
+		gap: 1rem;
+
+		@include md {
+			justify-items: center;
+		}
+
+		&__eyebrow {
+			color: #8592e0;
+			font-size: 1.15rem;
+			font-weight: 500;
+			max-width: 38rem;
+
+			@include md {
+				text-align: center;
+			}
+		}
+
+		&__headline {
+			font-size: 1.625rem;
+			font-weight: 700;
+
+			@include md {
+				font-size: 2rem;
+				text-align: center;
+			}
+
+			@include lg {
+				font-size: 2.5rem;
+			}
+
+			@include xl {
+				font-size: 2.75rem;
+			}
+		}
+
+		&__description {
+			font-size: 1.15rem;
+			max-width: 38rem;
+
+			@include md {
+				text-align: center;
+			}
+
+			@include xl {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__slider {
+		display: grid;
+		gap: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 840px;
+		position: relative;
+
+		&__controls {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__arrow-control {
+			align-items: center;
+			border-radius: 50%;
+			display: none;
+			height: 3rem;
+			justify-content: center;
+			position: absolute;
+			top: calc(50% - 2rem);
+			transform: translateY(-50%);
+			width: 3rem;
+
+			@include md {
+				display: flex;
+			}
+
+			&--prev {
+				justify-self: end;
+
+				@include md {
+					left: -3.5rem;
+				}
+
+				@include lg {
+					left: -4rem;
+				}
+			}
+
+			&--next {
+				@include md {
+					right: -3.5rem;
+				}
+
+				@include lg {
+					right: -4rem;
+				}
+			}
+
+			&__icon {
+				width: 1rem;
+
+				@include md {
+					width: 1.25rem;
+				}
+			}
+		}
+
+		&__dot-control {
+			padding: 0.75rem;
+
+			&__dot {
+				background-color: #333;
+				border-radius: 50%;
+				height: 0.75rem;
+				width: 0.75rem;
+
+				&--active {
+					background-color: #16745f;
+				}
+			}
+		}
+	}
+
+	&__slide {
+		align-content: center;
+		background-color: #f4f0ec;
+		border-radius: 0.5rem;
+		display: grid;
+		gap: 2rem;
+		height: 100%;
+		justify-items: center;
+		padding: 2rem;
+
+		@include md {
+			padding: 3rem;
+		}
+
+		&__image {
+			max-width: 9.375rem;
+			width: 100%;
+		}
+
+		&__testimonial {
+			display: grid;
+			gap: 2rem;
+			justify-items: center;
+
+			&__content {
+				max-width: 50ch;
+				font-size: 1.4rem;
+				text-align: center;
+			}
+
+			&__person {
+				display: grid;
+				gap: 0.5rem;
+				text-align: center;
+
+				&__name {
+					font-size: 1.15rem;
+					font-weight: bold;
+				}
+
+				&__title {
+					font-size: 0.875rem;
+				}
+			}
+		}
+	}
+}
