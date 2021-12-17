@@ -1,6 +1,7 @@
 import { PrismicLink, PrismicLinkProps } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
-import clsx from "clsx";
+
+import { cx } from "../cx";
 
 export type ButtonLinkProps<
 	LinkResolverFunction extends prismicH.LinkResolverFunction = prismicH.LinkResolverFunction,
@@ -18,7 +19,7 @@ export function ButtonLink<
 }: ButtonLinkProps<LinkResolverFunction>) {
 	return (
 		<PrismicLink
-			className={clsx("es-button", `es-button--${variant}`, className)}
+			className={cx("es-button", `es-button--${variant}`, className)}
 			{...restProps}
 		>
 			{children}
