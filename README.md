@@ -1,4 +1,4 @@
-# slice-library-essential-slices
+# slice-library-essential-slices-next
 
 A nicely made Slice Library for [Next.js][nextjs].
 
@@ -11,7 +11,7 @@ A nicely made Slice Library for [Next.js][nextjs].
 Start a new [Slice Machine][slicemachine] project with this Slice Library with the following command:
 
 ```bash
-npx @slicemachine/init@latest --lib prismicio-community/slice-library-essential-slices
+npx @slicemachine/init@latest --lib prismicio-community/slice-library-essential-slices-next
 ```
 
 The same command can be used to add the Slice Library to an existing Slice Machine project.
