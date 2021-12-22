@@ -10,7 +10,8 @@
 		"next:lint": "next lint",
 		"sass:dev": "npm run sass:build -- --watch",
 		"sass:build": "sass ./src/styles.scss:./src/styles.css",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"gen": "prismic-ts-codegen -c customtypes/**/index.json -s src/**/model.json -w src/types.ts"
 	},
 	"dependencies": {
 		"@prismicio/helpers": "^2.0.0-beta.7",
@@ -24,7 +25,8 @@
 	},
 	"devDependencies": {
 		"@prismicio/slice-canvas-renderer-react": "0.0.7",
-		"@prismicio/types": "^0.1.20",
+		"@prismicio/ts-codegen": "^0.0.1",
+		"@prismicio/types": "^0.1.21",
 		"concurrently": "^6.5.0",
 		"eslint": "^8.4.0",
 		"eslint-config-next": "^12.0.7",

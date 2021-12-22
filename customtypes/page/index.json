@@ -1,0 +1,61 @@
+{
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID",
+          "placeholder": "Unique identifier for the page"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "Title for the page",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "alternate_grid": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
+            "cards_carousel": {
+              "type": "SharedSlice"
+            },
+            "customer_logos": {
+              "type": "SharedSlice"
+            },
+            "faq_section": {
+              "type": "SharedSlice"
+            },
+            "images_slider": {
+              "type": "SharedSlice"
+            },
+            "pricing_table": {
+              "type": "SharedSlice"
+            },
+            "testimonials_slider": {
+              "type": "SharedSlice"
+            },
+            "video_highlights": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
