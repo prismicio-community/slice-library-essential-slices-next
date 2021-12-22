@@ -1,5 +1,6 @@
 {
 	"name": "slice-library-starter-next",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" \"npm:sass:dev\" --names \"next,slicemachine,sass\" --prefix-colors gray,magenta,redBright",
