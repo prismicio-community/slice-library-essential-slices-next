@@ -1,4 +1,4 @@
-import { SliceCanvasRenderer } from "@prismicio/slice-canvas-renderer-react";
+import { SliceSimulator } from "@prismicio/slice-simulator-react";
 import { SliceZone } from "@prismicio/react";
 
 import state from "../.slicemachine/libraries-state.json";
@@ -19,7 +19,7 @@ const components = {
 
 const SliceCanvas = () => {
 	return (
-		<SliceCanvasRenderer
+		<SliceSimulator
 			sliceZone={({ slices }) => (
 				<SliceZone slices={slices} components={components} />
 			)}
