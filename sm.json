@@ -2,5 +2,5 @@
 	"apiEndpoint": "https://slice-library-essential-slices-next.prismic.io/api/v2",
 	"libraries": ["@/src/slices"],
 	"_latest": "0.1.0",
-	"localSliceCanvasURL": "http://localhost:3000/_canvas"
+	"localSlicePreviewURL": "http://localhost:3000/_canvas"
 }
