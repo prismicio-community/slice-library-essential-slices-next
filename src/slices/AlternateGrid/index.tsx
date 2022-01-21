@@ -1,12 +1,9 @@
-import {
-	PrismicRichText,
-	PrismicText,
-	type SliceComponentProps,
-} from "@prismicio/react";
+import { RichText } from "prismic-reactjs";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../cx";
+import { SliceComponentProps } from "../../types";
 
 export type AlternateGridSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -60,17 +57,17 @@ export default function AlternateGrid({
 					<div className="es-alternate-grid__primary-content__intro">
 						{prismicH.asText(slice.primary.eyebrowHeadline) && (
 							<p className="es-alternate-grid__primary-content__intro__eyebrow">
-								<PrismicText field={slice.primary.eyebrowHeadline} />
+								{prismicH.asText(slice.primary.eyebrowHeadline)}
 							</p>
 						)}
 						{prismicH.asText(slice.primary.title) && (
 							<h2 className="es-alternate-grid__primary-content__intro__headline">
-								<PrismicText field={slice.primary.title} />
+								{prismicH.asText(slice.primary.title)}
 							</h2>
 						)}
 						{prismicH.asText(slice.primary.description) && (
 							<div className="es-alternate-grid__primary-content__intro__description">
-								<PrismicRichText field={slice.primary.description} />
+								<RichText render={slice.primary.description} />
 							</div>
 						)}
 					</div>
@@ -87,12 +84,12 @@ export default function AlternateGrid({
 									)}
 									{prismicH.asText(item.title) && (
 										<h3 className="es-alternate-grid__item__heading">
-											<PrismicText field={item.title} />
+											{prismicH.asText(item.title)}
 										</h3>
 									)}
 									{prismicH.asText(item.description) && (
 										<div className="es-alternate-grid__item__description">
-											<PrismicRichText field={item.description} />
+											<RichText render={item.description} />
 										</div>
 									)}
 								</div>

@@ -1,13 +1,10 @@
 import { useState } from "react";
-import {
-	PrismicRichText,
-	PrismicText,
-	type SliceComponentProps,
-} from "@prismicio/react";
+import { RichText } from "prismic-reactjs";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../cx";
+import { SliceComponentProps } from "../../types";
 
 export type VideoHighlightsSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -41,17 +38,17 @@ export default function VideoHighlights({
 				<div className="es-video-highlights__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-video-highlights__intro__eyebrow">
-							<PrismicText field={slice.primary.eyebrowHeadline} />
+							{prismicH.asText(slice.primary.eyebrowHeadline)}
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-video-highlights__intro__headline">
-							<PrismicText field={slice.primary.title} />
+							{prismicH.asText(slice.primary.title)}
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
 						<div className="es-video-highlights__intro__description">
-							<PrismicRichText field={slice.primary.description} />
+							<RichText render={slice.primary.description} />
 						</div>
 					)}
 				</div>
@@ -82,7 +79,7 @@ export default function VideoHighlights({
 									)}
 									onClick={() => setActiveHighlightIndex(index)}
 								>
-									<PrismicText field={item.videoTitle} />
+									{prismicH.asText(item.videoTitle)}
 								</button>
 							</li>
 						))}

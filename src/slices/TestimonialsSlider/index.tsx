@@ -1,15 +1,12 @@
 import { useState } from "react";
-import {
-	PrismicRichText,
-	PrismicText,
-	type SliceComponentProps,
-} from "@prismicio/react";
+import { RichText } from "prismic-reactjs";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 import { useKeenSlider } from "keen-slider/react";
 
 import { cx } from "../../cx";
 import { ChevronIcon } from "../../components/ChevronIcon";
+import { SliceComponentProps } from "../../types";
 
 export type TestimonialsSliderSlice = prismicT.SharedSlice<
 	"image_slider",
@@ -49,7 +46,7 @@ function Slide({ image, testimonial, person, title }: SliderImageProps) {
 			<figcaption className="es-testimonials-slider__slide__testimonial">
 				{prismicH.asText(testimonial) && (
 					<div className="es-testimonials-slider__slide__testimonial__content">
-						<PrismicRichText field={testimonial} />
+						<RichText render={testimonial} />
 					</div>
 				)}
 				<div className="es-testimonials-slider__slide__testimonial__person">
@@ -94,17 +91,17 @@ export default function TestimonialsSlider({
 				<div className="es-testimonials-slider__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-testimonials-slider__intro__eyebrow">
-							<PrismicText field={slice.primary.eyebrowHeadline} />
+							{prismicH.asText(slice.primary.eyebrowHeadline)}
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-testimonials-slider__intro__headline">
-							<PrismicText field={slice.primary.title} />
+							{prismicH.asText(slice.primary.title)}
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.paragraph) && (
 						<div className="es-testimonials-slider__intro__description">
-							<PrismicRichText field={slice.primary.paragraph} />
+							<RichText render={slice.primary.paragraph} />
 						</div>
 					)}
 				</div>
