@@ -1,3 +1,7 @@
+// **NOTE**: This file is taken from `@prismicio/react`. Once this library can
+// use `@prismicio/react`, this file will be removed and replaced by using the
+// PrismicLink component directly from `@prismicio/react`.
+
 import * as React from "react";
 import * as prismicH from "@prismicio/helpers";
 import * as prismicT from "@prismicio/types";
