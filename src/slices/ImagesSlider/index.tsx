@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicRichText,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 import { useKeenSlider } from "keen-slider/react";
 
 import { cx } from "../../cx";
-import { SliceComponentProps } from "../../types";
 
 export type ImagesSliderSlice = prismicT.SharedSlice<
 	"image_slider",
@@ -40,7 +43,7 @@ function Slide({ image, description }: SliderImageProps) {
 			)}
 			{prismicH.asText(description) && (
 				<figcaption className="es-images-slider__slide__description">
-					<RichText render={description} />
+					<PrismicRichText field={description} />
 				</figcaption>
 			)}
 		</figure>
@@ -69,17 +72,17 @@ export default function ImagesSlider({
 				<div className="es-images-slider__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-images-slider__intro__eyebrow">
-							{prismicH.asText(slice.primary.eyebrowHeadline)}
+							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-images-slider__intro__headline">
-							{prismicH.asText(slice.primary.title)}
+							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
 						<div className="es-images-slider__intro__description">
-							<RichText render={slice.primary.description} />
+							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>

@@ -1,5 +1,5 @@
 {
 	"name": "Essential Slices",
-	"sliceCanvasURL": "https://slice-library-essential-slices-next.netlify.app/_simulator",
+	"sliceCanvasURL": "https://slice-library-essential-slices-next.netlify.app/_canvas",
 	"libraryPath": "@/src/slices"
 }

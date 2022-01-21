@@ -1,6 +1,6 @@
+import { PrismicLink, PrismicLinkProps } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
-import { PrismicLink, PrismicLinkProps } from "./PrismicLink";
 import { cx } from "../cx";
 
 export type ButtonLinkProps<

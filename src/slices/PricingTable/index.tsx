@@ -1,10 +1,13 @@
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicRichText,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../cx";
 import { ButtonLink } from "../../components/ButtonLink";
-import { SliceComponentProps } from "../../types";
 
 export type PricingTableSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -55,17 +58,17 @@ function PlanCard({
 			<div className="es-pricing-table__plan-card__content">
 				{prismicH.asText(title) && (
 					<h3 className="es-pricing-table__plan-card__content__title">
-						{prismicH.asText(title)}
+						<PrismicText field={title} />
 					</h3>
 				)}
 				{prismicH.asText(priceOption) && (
 					<p className="es-pricing-table__plan-card__content__price">
-						{prismicH.asText(priceOption)}
+						<PrismicText field={priceOption} />
 					</p>
 				)}
 				{prismicH.asText(features) && (
 					<div className="es-pricing-table__plan-card__content__features">
-						<RichText render={features} />
+						<PrismicRichText field={features} />
 					</div>
 				)}
 			</div>
@@ -92,17 +95,17 @@ export default function PricingTable({
 				<div className="es-pricing-table__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-pricing-table__intro__eyebrow">
-							{prismicH.asText(slice.primary.eyebrowHeadline)}
+							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-pricing-table__intro__headline">
-							{prismicH.asText(slice.primary.title)}
+							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
 						<div className="es-pricing-table__intro__description">
-							<RichText render={slice.primary.description} />
+							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>
