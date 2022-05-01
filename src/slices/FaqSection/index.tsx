@@ -1,11 +1,14 @@
 import { useReducer } from "react";
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicRichText,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { cx } from "../../cx";
 import { ChevronIcon } from "../../components/ChevronIcon";
-import { SliceComponentProps } from "../../types";
 
 export type FaqSectionSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -39,7 +42,7 @@ function Question({ title, text }: QuestionProps) {
 				className="es-faq-section__question__toggler"
 			>
 				<span className="es-faq-section__question__toggler__label">
-					{prismicH.asText(title)}
+					<PrismicText field={title} />
 				</span>
 				<ChevronIcon
 					direction={isOpen ? "up" : "down"}
@@ -53,7 +56,7 @@ function Question({ title, text }: QuestionProps) {
 					isOpen && "es-faq-section__question__content--open",
 				)}
 			>
-				<RichText render={text} />
+				<PrismicRichText field={text} />
 			</div>
 		</div>
 	);
@@ -72,17 +75,17 @@ export default function FaqSection({
 				<div className="es-faq-section__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-faq-section__intro__eyebrow">
-							{prismicH.asText(slice.primary.eyebrowHeadline)}
+							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-faq-section__intro__headline">
-							{prismicH.asText(slice.primary.title)}
+							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
 						<div className="es-faq-section__intro__description">
-							<RichText render={slice.primary.description} />
+							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>

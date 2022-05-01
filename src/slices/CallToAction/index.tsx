@@ -1,9 +1,12 @@
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicRichText,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
 import { ButtonLink } from "../../components/ButtonLink";
-import { SliceComponentProps } from "../../types";
 
 export type CallToActionSlice = prismicT.SharedSlice<
 	"call_to_action",
@@ -39,12 +42,12 @@ export default function CallToAction({
 				<div className="es-call-to-action__content">
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-call-to-action__content__heading">
-							{prismicH.asText(slice.primary.title)}
+							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.paragraph) && (
 						<div className="es-call-to-action__content__paragraph">
-							<RichText render={slice.primary.paragraph} />
+							<PrismicRichText field={slice.primary.paragraph} />
 						</div>
 					)}
 				</div>

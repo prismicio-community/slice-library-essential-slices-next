@@ -1,10 +1,12 @@
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicLink,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 
-import { SliceComponentProps } from "../../types";
 import { ButtonLink } from "../../components/ButtonLink";
-import { PrismicLink } from "../../components/PrismicLink";
 
 export type CustomerLogosSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -34,7 +36,7 @@ export default function CustomerLogos({
 			<div className="es-bounded__content es-customer-logos__content">
 				{prismicH.asText(slice.primary.eyebrowHeadline) && (
 					<h2 className="es-customer-logos__heading">
-						{prismicH.asText(slice.primary.eyebrowHeadline)}
+						<PrismicText field={slice.primary.eyebrowHeadline} />
 					</h2>
 				)}
 				{slice.items.length > 0 && (

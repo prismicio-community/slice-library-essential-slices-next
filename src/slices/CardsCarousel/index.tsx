@@ -1,10 +1,13 @@
-import { RichText } from "prismic-reactjs";
+import {
+	PrismicRichText,
+	PrismicText,
+	type SliceComponentProps,
+} from "@prismicio/react";
 import type * as prismicT from "@prismicio/types";
 import * as prismicH from "@prismicio/helpers";
 import { useKeenSlider } from "keen-slider/react";
 
 import { ChevronIcon } from "../../components/ChevronIcon";
-import { SliceComponentProps } from "../../types";
 
 export type CardsCarouselSlice = prismicT.SharedSlice<
 	"custom_logos",
@@ -69,17 +72,17 @@ export default function CardsCarousel({
 				<div className="es-cards-carousel__intro">
 					{prismicH.asText(slice.primary.eyebrowHeadline) && (
 						<p className="es-cards-carousel__intro__eyebrow">
-							{prismicH.asText(slice.primary.eyebrowHeadline)}
+							<PrismicText field={slice.primary.eyebrowHeadline} />
 						</p>
 					)}
 					{prismicH.asText(slice.primary.title) && (
 						<h2 className="es-cards-carousel__intro__headline">
-							{prismicH.asText(slice.primary.title)}
+							<PrismicText field={slice.primary.title} />
 						</h2>
 					)}
 					{prismicH.asText(slice.primary.description) && (
 						<div className="es-cards-carousel__intro__description">
-							<RichText render={slice.primary.description} />
+							<PrismicRichText field={slice.primary.description} />
 						</div>
 					)}
 				</div>
@@ -103,12 +106,12 @@ export default function CardsCarousel({
 									)}
 									{prismicH.asText(item.title) && (
 										<h3 className="es-cards-carousel__card__title">
-											{prismicH.asText(item.title)}
+											<PrismicText field={item.title} />
 										</h3>
 									)}
 									{prismicH.asText(item.content) && (
 										<div className="es-cards-carousel__card__content">
-											<RichText render={item.content} />
+											<PrismicRichText field={item.content} />
 										</div>
 									)}
 								</div>

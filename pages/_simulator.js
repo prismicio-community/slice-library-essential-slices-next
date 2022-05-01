@@ -1,18 +1,27 @@
 import { SliceSimulator } from "@prismicio/slice-simulator-react";
-import SliceZone from "next-slicezone";
+import { SliceZone } from "@prismicio/react";
 
 import state from "../.slicemachine/libraries-state.json";
 import * as slices from "../src/slices";
 
-const resolver = ({ sliceName }) => {
-	return slices[sliceName];
+const components = {
+	alternate_grid: slices.AlternateGrid,
+	call_to_action: slices.CallToAction,
+	cards_carousel: slices.CardsCarousel,
+	customer_logos: slices.CustomerLogos,
+	faq_section: slices.FaqSection,
+	image_slider: slices.ImagesSlider,
+	images_slider: slices.ImagesSlider,
+	pricing_table: slices.PricingTable,
+	testimonials_slider: slices.TestimonialsSlider,
+	video_highlights: slices.VideoHighlights,
 };
 
 const SliceCanvas = () => {
 	return (
 		<SliceSimulator
 			sliceZone={({ slices }) => (
-				<SliceZone slices={slices} resolver={resolver} />
+				<SliceZone slices={slices} components={components} />
 			)}
 			state={state}
 		/>
